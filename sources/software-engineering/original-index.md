@@ -1,4 +1,4 @@
-# management-strategy Source Index
+# software-engineering Source Index
 
 ## 원본 자료
 
@@ -6,8 +6,9 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| MS-P1 | 1. 경영전략_V5.3_Part I.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\1. 경영전략_V5.3_Part I.pdf` | 503 | 1차 텍스트 추출 완료 |
-| MS-P2 | 2. 경영전략_V4.7_Part II.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\2. 경영전략_V4.7_Part II.pdf` | 35 | 1차 텍스트 추출 완료 |
+| SE-P1 | 1. SW공학_Part I_V5.6_20170914.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\2. SW공학\1. SW공학_Part I_V5.6_20170914.pdf` | 226 | 1차 텍스트 추출 완료 |
+| SE-P2 | 2. 프로젝트관리_V1.3_20170914.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\2. SW공학\2. 프로젝트관리_V1.3_20170914.pdf` | 102 | 1차 텍스트 추출 완료 |
+| SE-P3 | 2. SW공학_Part II_V6.2_20170920.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\3. SW공학ii\2. SW공학_Part II_V6.2_20170920.pdf` | 502 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

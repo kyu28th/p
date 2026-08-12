@@ -1,4 +1,4 @@
-# management-strategy Source Index
+# database Source Index
 
 ## 원본 자료
 
@@ -6,8 +6,7 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| MS-P1 | 1. 경영전략_V5.3_Part I.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\1. 경영전략_V5.3_Part I.pdf` | 503 | 1차 텍스트 추출 완료 |
-| MS-P2 | 2. 경영전략_V4.7_Part II.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\2. 경영전략_V4.7_Part II.pdf` | 35 | 1차 텍스트 추출 완료 |
+| DB-P1 | 1. 데이터베이스 I_V6.7_20171027.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\7. 데이터베이스\1. 데이터베이스 I_V6.7_20171027.pdf` | 460 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

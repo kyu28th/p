@@ -1,4 +1,4 @@
-# management-strategy Source Index
+# operating-system Source Index
 
 ## 원본 자료
 
@@ -6,8 +6,7 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| MS-P1 | 1. 경영전략_V5.3_Part I.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\1. 경영전략_V5.3_Part I.pdf` | 503 | 1차 텍스트 추출 완료 |
-| MS-P2 | 2. 경영전략_V4.7_Part II.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\2. 경영전략_V4.7_Part II.pdf` | 35 | 1차 텍스트 추출 완료 |
+| OS-P1 | 1. OS(Operating System)_V3.0_20161220(수정본).pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\9. OS\1. OS(Operating System)_V3.0_20161220(수정본).pdf` | 196 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 
