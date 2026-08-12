@@ -8,7 +8,7 @@
 | Official current standard | 2023-01-01 ~ 2026-12-31 |
 | Official next standard | 2027-01-01 ~ 2030-12-31 |
 | Source age | Mostly 2016-2017 versions, 2019 timestamps |
-| Past exams | 39 PDF rounds converted, 1 HWP pending, 3 image-PDF rounds need OCR |
+| Past exams | 39 PDF rounds converted, 1 HWP pending, 2 image-PDF rounds need OCR |
 | Overall progress | ██░░░░░░░░ 22% |
 
 ## Key Warning
@@ -60,5 +60,5 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 - [x] Promote one sample topic from `sources/` to `knowledge/`.
 - [ ] Create FRAND topic card from `sources/management-strategy/part-ii.md` Page 8~10.
 - [ ] Review latest past exam: `past-exams/information-management/139.md`.
-- [ ] OCR or convert missing-text rounds: 99, 101, 102, and HWP round 116.
+- [ ] OCR or convert missing-text rounds: 101, 102, and HWP round 116.
 - [ ] Add the first `trends/` topic for a critical gap.
