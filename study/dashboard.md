@@ -20,7 +20,7 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 
 | Area | Source | Topic | Practice | Answers | Freshness | Overall | Risk |
 |---|---:|---:|---:|---:|---:|---|---|
-| 경영전략 | 100% | 0% | 0% | 0% | 0% | ██░░░░░░░░ 20% | needs current check |
+| 경영전략 | 100% | 2% | 0% | 0% | 0% | ██░░░░░░░░ 21% | needs current check |
 | SW공학 | 100% | 0% | 0% | 0% | 0% | ██░░░░░░░░ 20% | needs current check |
 | 데이터베이스 | 100% | 0% | 0% | 0% | 0% | ██░░░░░░░░ 20% | needs current check |
 | 시스템/아키텍처 | 100% | 0% | 0% | 0% | 0% | ██░░░░░░░░ 20% | needs current check |
@@ -34,7 +34,8 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 |---:|---|---|---|---|
 | 1 | `exam/current-exam-standard.md` | - | 공식 출제기준 확인 | 현재/다음 출제기준을 기준점으로 삼기 |
 | 2 | `study/coverage-gap.md` | - | 누락/취약 토픽 확인 | 구자료 기반 학습의 위험 줄이기 |
-| 3 | `sources/management-strategy/part-ii.md` | Page 4~6 | 표준특허 | 페이지 추적 학습 코칭 샘플 |
+| 3 | `knowledge/management/strategy/standard-essential-patent.md` | Page 4~6 | 표준특허 | 첫 번째 토픽 카드 복습 |
+| 4 | `sources/management-strategy/part-ii.md` | Page 8~10 | FRAND | 표준특허와 연결되는 다음 카드 후보 |
 
 ## Critical Gaps
 
@@ -54,6 +55,6 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 
 - [ ] Download or manually record the official detailed Q-Net standard for 2023-2026.
 - [ ] Compare the 2027-2030 standard before preparing for a 2027 exam.
-- [ ] Promote one sample topic from `sources/` to `knowledge/`.
+- [x] Promote one sample topic from `sources/` to `knowledge/`.
+- [ ] Create FRAND topic card from `sources/management-strategy/part-ii.md` Page 8~10.
 - [ ] Add the first `trends/` topic for a critical gap.
-

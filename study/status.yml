@@ -9,11 +9,11 @@ areas:
   management_strategy:
     label: "경영전략"
     source_ingestion: 100
-    topic_organization: 0
+    topic_organization: 2
     problem_practice: 0
     answer_writing: 0
     freshness_check: 0
-    overall: 20
+    overall: 21
     risk: "needs-current-check"
   software_engineering:
     label: "SW공학"
@@ -82,8 +82,12 @@ recommended_study:
     topic: "누락/취약 토픽 확인"
     reason: "구자료 기반 학습의 위험을 줄이기 위함"
   - priority: 3
-    source: "sources/management-strategy/part-ii.md"
+    source: "knowledge/management/strategy/standard-essential-patent.md"
     pages: "Page 4~6"
     topic: "표준특허"
-    reason: "출처 페이지 추적 검증용 샘플"
-
+    reason: "첫 번째 토픽 카드 복습"
+  - priority: 4
+    source: "sources/management-strategy/part-ii.md"
+    pages: "Page 8~10"
+    topic: "FRAND"
+    reason: "표준특허와 연결되는 다음 카드 후보"
