@@ -7,6 +7,9 @@ project:
   source_age_note: "Most ingested PDFs are old source material and require current checks."
   past_exam_note: "39 converted rounds analyzed; rounds 99, 101, 102 manually restored; round 116 HWP pending."
   topic_map_note: "54 canonical topics identified in the first repository-based map."
+  current_milestone: "2026-08-22 baseline mock exam"
+  baseline_mock_exam: "round 140 unseen set; 100 minutes x 4 periods = 400 minutes"
+  unseen_set_rule: "Do not use round 140 for ordinary study, examples, recommendations, or predictions before 2026-08-22."
   overall_progress_percent: 28
 
 repositories:
@@ -45,6 +48,12 @@ coverage:
   new_gap: 14
   update_needed: 7
   review_needed: 1
+
+operating_rules:
+  single_source_of_truth: "GitHub repository kyu28th/p"
+  learning_priority: "past exam analysis -> topic learning -> recall -> answer writing -> evaluation -> weak-point repair -> review"
+  avoid_overbuilding: true
+  chatgpt_role: "external study and analysis tool; important outputs may be reflected into the repository by Codex"
 
 next_actions:
   - priority: 1

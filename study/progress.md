@@ -12,6 +12,8 @@ topic card -> timed answer -> review -> weak point -> spaced review
 
 The first repository-based topic map now identifies 54 canonical topics from 39 converted past-exam rounds. The main finding is that classic DB, OS, algorithm, testing, PMO, and requirements topics can be practiced now, while recent AI/security/cloud-native topics need current-source research before answer writing.
 
+The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until then, and the baseline mock exam will use 100 minutes x 4 periods for a total of 400 minutes.
+
 ## Completed
 
 - GitHub and local repository connection verified.
@@ -29,6 +31,8 @@ The first repository-based topic map now identifies 54 canonical topics from 39 
 - Source coverage status created in `study/exam-source-coverage.md`.
 - Latest-source research priorities created in `study/latest-research-priorities.md`.
 - Answer practice priorities created in `study/answer-practice-priorities.md`.
+- 2026-08-22 baseline mock-exam plan created in `study/2026-08-22-baseline-plan.md`.
+- Round 140 unseen-set rule recorded.
 
 ## Pending
 
@@ -37,6 +41,7 @@ The first repository-based topic map now identifies 54 canonical topics from 39 
 - First reviewed answer.
 - First answer-derived weak-point entry.
 - First current-source note for RAG, AI RMF, Zero Trust, or SBOM.
+- Preserve round 140 until the 2026-08-22 baseline mock exam.
 - First evidence-based prediction.
 - First explicit past-exam to topic link.
 

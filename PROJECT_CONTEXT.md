@@ -74,3 +74,17 @@ study/status.yml -> study/dashboard.md
 - 최근 증가 주제: LLM/RAG, AI RMF/ISO 42001, AI 법/윤리, OWASP LLM/Prompt Injection/Model Inversion, Zero Trust, SBOM, Kubernetes/Cloud Native, Data Observability, AI 학습데이터 품질.
 - 즉시 답안 연습 가능 주제: SW 테스트/품질, 데이터 품질, 트랜잭션/격리수준, 정규화/반정규화, PMO/감리, 요구공학, Agile/DevOps 기본, WBS/EVM.
 - 다음 우선순위는 자료량 증가가 아니라 `OK` 토픽 답안 작성과 `NEW_GAP` 토픽 최신 근거 보강이다.
+
+## Operating Handoff
+
+- Single source of truth: GitHub repository `kyu28th/p`.
+- Codex role: persistent operator, study partner, repository manager, topic/answer/weak-point tracker, and next-study recommender.
+- ChatGPT role when used: external study/analysis tool. Important ChatGPT output should be reflected into the repository only when it improves the learning loop.
+- Final success metric: ability to understand exam questions, recall the proper topic, build an answer structure quickly, include key terms, use tables/diagrams, and write scoreable answers within time.
+- Current milestone: 2026-08-22 baseline mock exam.
+- Mock exam rule: round 140 is reserved as an unseen set until 2026-08-22. Ordinary study uses rounds 139 and earlier.
+- Mock exam format: 100 minutes x 4 periods = 400 minutes.
+- Before 2026-08-22, the focus is not full-scope mastery. The focus is high-frequency topic recognition, basic knowledge recovery, recent-gap recognition, outline practice, answer structure, table/diagram habit, and timed-answer baseline measurement.
+- Avoid excessive system construction. New schema/dashboard/script/template work should be done only when it clearly improves pass probability more than direct study.
+- Daily loop: topic -> knowledge check -> concept understanding -> related past exams -> outline -> answer keywords -> table/diagram -> answer writing -> review -> weak point -> review schedule.
+- 2026-08-22 results should classify each question by knowledge level, answer-structure quality, time issue, and interpretation failure, then become the baseline for the 141st-exam plan.

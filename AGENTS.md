@@ -50,3 +50,18 @@
 - 취약 분야는 `study/weak-points.md`에 기록한다.
 - 세션별 주요 작업은 `study/session-log/`에 기록한다.
 - 새 Codex 세션이 시작되어도 `AGENTS.md`, `PROJECT_CONTEXT.md`, `study/status.yml`, `study/dashboard.md`를 읽으면 현재 상태를 복원할 수 있어야 한다.
+
+## Long-Term Operating Stance
+
+- The GitHub repository `kyu28th/p` is the single source of truth for this project.
+- Important goals, status, decisions, progress, weak points, answer history, review needs, and next actions must be recorded in the repository, not only in chat memory.
+- Codex is the persistent operator of the project: repository state analysis, past-exam management, Topic Map management, knowledge management, progress tracking, answer-history management, weak-point management, review tracking, latest-gap tracking, priority selection, next-study recommendation, decision logging, commit/push, and state restoration in new sessions.
+- ChatGPT should be treated as an external study and analysis tool when used. If ChatGPT produces important new judgment, Codex should decide whether and how to reflect it back into the repository.
+- Do not use round 140 questions for ordinary study, examples, topic recommendations, or prediction work before the 2026-08-22 baseline mock exam. Round 140 is an unseen set.
+- Normal study before the baseline mock exam should use rounds 139 and earlier.
+- The current first milestone is 2026-08-22: a 400-minute mock exam using round 140 to measure baseline ability, not to predict final pass/fail.
+- Daily work should follow this loop: topic selection -> existing knowledge check -> concept understanding -> related past-exam check -> 30-second to 3-minute outline -> answer keywords -> table/diagram if useful -> answer writing when needed -> review -> weak-point record -> review schedule.
+- Source reading alone is not completion. Prefer recall, outline, table/diagram, or answer output.
+- For visuals, prefer simple exam-writable forms: architecture diagram, process flow, concept map, comparison matrix, layer diagram, lifecycle, sequence, classification diagram, and relationship diagram. The standard is whether the user can reproduce it by hand in 30 seconds to 1 minute.
+- Do not overbuild schemas, dashboards, metadata, scripts, directories, templates, or automations. Before creating system structure, ask whether it improves pass probability more than studying now. Learning comes before system construction.
+- At session end, record only structured information needed for the next session to continue accurately: work done, changed understanding, written answers, found weaknesses, review needs, next recommendation, and important decisions.
