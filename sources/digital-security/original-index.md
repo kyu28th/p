@@ -6,8 +6,8 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| SEC-P1 | 1. 디지털시큐리티_V5.7_Part I_20171021.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\6. 디지털 보안\1. 디지털시큐리티_V5.7_Part I_20171021.pdf` | 426 | 1차 텍스트 추출 완료 |
-| SEC-P2 | 2. 디지털시큐리티_V5.2_Part II_20171021.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\6. 디지털 보안\2. 디지털시큐리티_V5.2_Part II_20171021.pdf` | 139 | 1차 텍스트 추출 완료 |
+| SEC-P1 | 1. 디지털시큐리티_V5.7_Part I_20171021.pdf | `local-source\\9주차_신규_pdf (2) (2)\6. 디지털 보안\1. 디지털시큐리티_V5.7_Part I_20171021.pdf` | 426 | 1차 텍스트 추출 완료 |
+| SEC-P2 | 2. 디지털시큐리티_V5.2_Part II_20171021.pdf | `local-source\\9주차_신규_pdf (2) (2)\6. 디지털 보안\2. 디지털시큐리티_V5.2_Part II_20171021.pdf` | 139 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

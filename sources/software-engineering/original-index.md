@@ -6,9 +6,9 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| SE-P1 | 1. SW공학_Part I_V5.6_20170914.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\2. SW공학\1. SW공학_Part I_V5.6_20170914.pdf` | 226 | 1차 텍스트 추출 완료 |
-| SE-P2 | 2. 프로젝트관리_V1.3_20170914.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\2. SW공학\2. 프로젝트관리_V1.3_20170914.pdf` | 102 | 1차 텍스트 추출 완료 |
-| SE-P3 | 2. SW공학_Part II_V6.2_20170920.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\3. SW공학ii\2. SW공학_Part II_V6.2_20170920.pdf` | 502 | 1차 텍스트 추출 완료 |
+| SE-P1 | 1. SW공학_Part I_V5.6_20170914.pdf | `local-source\\9주차_신규_pdf (2) (2)\2. SW공학\1. SW공학_Part I_V5.6_20170914.pdf` | 226 | 1차 텍스트 추출 완료 |
+| SE-P2 | 2. 프로젝트관리_V1.3_20170914.pdf | `local-source\\9주차_신규_pdf (2) (2)\2. SW공학\2. 프로젝트관리_V1.3_20170914.pdf` | 102 | 1차 텍스트 추출 완료 |
+| SE-P3 | 2. SW공학_Part II_V6.2_20170920.pdf | `local-source\\9주차_신규_pdf (2) (2)\3. SW공학ii\2. SW공학_Part II_V6.2_20170920.pdf` | 502 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

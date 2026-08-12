@@ -6,8 +6,8 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| MS-P1 | 1. 경영전략_V5.3_Part I.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\1. 경영전략_V5.3_Part I.pdf` | 503 | 1차 텍스트 추출 완료 |
-| MS-P2 | 2. 경영전략_V4.7_Part II.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\1. 경영전략\2. 경영전략_V4.7_Part II.pdf` | 35 | 1차 텍스트 추출 완료 |
+| MS-P1 | 1. 경영전략_V5.3_Part I.pdf | `local-source\\9주차_신규_pdf (2) (2)\1. 경영전략\1. 경영전략_V5.3_Part I.pdf` | 503 | 1차 텍스트 추출 완료 |
+| MS-P2 | 2. 경영전략_V4.7_Part II.pdf | `local-source\\9주차_신규_pdf (2) (2)\1. 경영전략\2. 경영전략_V4.7_Part II.pdf` | 35 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

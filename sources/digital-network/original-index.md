@@ -6,8 +6,8 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| DN-P1 | 1. 디지털네트워크_V6.1_Part I_20171014.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\5. 디지털네트워크\1. 디지털네트워크_V6.1_Part I_20171014.pdf` | 444 | 1차 텍스트 추출 완료 |
-| DN-P2 | 2. 디지털네트워크_V6.1_Part II.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\5. 디지털네트워크\2. 디지털네트워크_V6.1_Part II.pdf` | 43 | 1차 텍스트 추출 완료 |
+| DN-P1 | 1. 디지털네트워크_V6.1_Part I_20171014.pdf | `local-source\\9주차_신규_pdf (2) (2)\5. 디지털네트워크\1. 디지털네트워크_V6.1_Part I_20171014.pdf` | 444 | 1차 텍스트 추출 완료 |
+| DN-P2 | 2. 디지털네트워크_V6.1_Part II.pdf | `local-source\\9주차_신규_pdf (2) (2)\5. 디지털네트워크\2. 디지털네트워크_V6.1_Part II.pdf` | 43 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

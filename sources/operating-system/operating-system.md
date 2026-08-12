@@ -4,7 +4,7 @@
 source:
   id: OS-P1
   document: "1. OS(Operating System)_V3.0_20161220(수정본).pdf"
-  local_path: "C:\\Users\\ssysis8\\Downloads\\9주차_신규_pdf (2) (2)\\9. OS\\1. OS(Operating System)_V3.0_20161220(수정본).pdf"
+  source_ref: "local-source\\9주차_신규_pdf (2) (2)\\9. OS\\1. OS(Operating System)_V3.0_20161220(수정본).pdf"
   repository_policy: "Original PDF is kept locally; Markdown extraction is stored in Git."
 material_note: "이 자료는 과거 강의자료입니다. 2016~2017 버전명이 포함되어 있고 파일 수정일은 2019-03-13입니다. 최신 기술, 법/제도, 표준, 제품 동향은 반드시 별도 검증이 필요합니다."
 extraction:

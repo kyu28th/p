@@ -20,8 +20,9 @@ globalThis.Path2D = class Path2D {
   addPath() {}
 };
 
-const pdfjsPath = "C:/Users/ssysis8/AppData/Local/OpenAI/Codex/runtimes/cua_node/23828fd353da361d/bin/node_modules/pdfjs-dist/legacy/build/pdf.mjs";
+const pdfjsPath = process.env.PDFJS_DIST_PATH ?? "node_modules/pdfjs-dist/legacy/build/pdf.mjs";
 const pdfjs = await import(pathToFileURL(pdfjsPath).href);
+const sourceRoot = process.env.LOCAL_SOURCE_ROOT ?? "LOCAL_SOURCE_ROOT";
 
 const materialNote = "이 자료는 과거 강의자료입니다. 2016~2017 버전명이 포함되어 있고 파일 수정일은 2019-03-13입니다. 최신 기술, 법/제도, 표준, 제품 동향은 반드시 별도 검증이 필요합니다.";
 
@@ -32,7 +33,7 @@ const docs = [
     title: "경영전략 Part I",
     outputName: "part-i.md",
     document: "1. 경영전략_V5.3_Part I.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/1. 경영전략/1. 경영전략_V5.3_Part I.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/1. 경영전략/1. 경영전략_V5.3_Part I.pdf`,
   },
   {
     group: "management-strategy",
@@ -40,7 +41,7 @@ const docs = [
     title: "경영전략 Part II",
     outputName: "part-ii.md",
     document: "2. 경영전략_V4.7_Part II.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/1. 경영전략/2. 경영전략_V4.7_Part II.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/1. 경영전략/2. 경영전략_V4.7_Part II.pdf`,
   },
   {
     group: "software-engineering",
@@ -48,7 +49,7 @@ const docs = [
     title: "SW공학 Part I",
     outputName: "sw-engineering-part-i.md",
     document: "1. SW공학_Part I_V5.6_20170914.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/2. SW공학/1. SW공학_Part I_V5.6_20170914.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/2. SW공학/1. SW공학_Part I_V5.6_20170914.pdf`,
   },
   {
     group: "software-engineering",
@@ -56,7 +57,7 @@ const docs = [
     title: "프로젝트관리",
     outputName: "project-management.md",
     document: "2. 프로젝트관리_V1.3_20170914.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/2. SW공학/2. 프로젝트관리_V1.3_20170914.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/2. SW공학/2. 프로젝트관리_V1.3_20170914.pdf`,
   },
   {
     group: "software-engineering",
@@ -64,7 +65,7 @@ const docs = [
     title: "SW공학 Part II",
     outputName: "sw-engineering-part-ii.md",
     document: "2. SW공학_Part II_V6.2_20170920.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/3. SW공학ii/2. SW공학_Part II_V6.2_20170920.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/3. SW공학ii/2. SW공학_Part II_V6.2_20170920.pdf`,
   },
   {
     group: "digital-service",
@@ -72,7 +73,7 @@ const docs = [
     title: "디지털서비스",
     outputName: "digital-service-i.md",
     document: "1. 디지털서비스_V6.0_I_20170718.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/4. 디지털서비스/1. 디지털서비스_V6.0_I_20170718.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/4. 디지털서비스/1. 디지털서비스_V6.0_I_20170718.pdf`,
   },
   {
     group: "digital-network",
@@ -80,7 +81,7 @@ const docs = [
     title: "디지털네트워크 Part I",
     outputName: "digital-network-part-i.md",
     document: "1. 디지털네트워크_V6.1_Part I_20171014.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/5. 디지털네트워크/1. 디지털네트워크_V6.1_Part I_20171014.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/5. 디지털네트워크/1. 디지털네트워크_V6.1_Part I_20171014.pdf`,
   },
   {
     group: "digital-network",
@@ -88,7 +89,7 @@ const docs = [
     title: "디지털네트워크 Part II",
     outputName: "digital-network-part-ii.md",
     document: "2. 디지털네트워크_V6.1_Part II.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/5. 디지털네트워크/2. 디지털네트워크_V6.1_Part II.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/5. 디지털네트워크/2. 디지털네트워크_V6.1_Part II.pdf`,
   },
   {
     group: "digital-security",
@@ -96,7 +97,7 @@ const docs = [
     title: "디지털시큐리티 Part I",
     outputName: "digital-security-part-i.md",
     document: "1. 디지털시큐리티_V5.7_Part I_20171021.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/6. 디지털 보안/1. 디지털시큐리티_V5.7_Part I_20171021.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/6. 디지털 보안/1. 디지털시큐리티_V5.7_Part I_20171021.pdf`,
   },
   {
     group: "digital-security",
@@ -104,7 +105,7 @@ const docs = [
     title: "디지털시큐리티 Part II",
     outputName: "digital-security-part-ii.md",
     document: "2. 디지털시큐리티_V5.2_Part II_20171021.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/6. 디지털 보안/2. 디지털시큐리티_V5.2_Part II_20171021.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/6. 디지털 보안/2. 디지털시큐리티_V5.2_Part II_20171021.pdf`,
   },
   {
     group: "database",
@@ -112,7 +113,7 @@ const docs = [
     title: "데이터베이스 I",
     outputName: "database-i.md",
     document: "1. 데이터베이스 I_V6.7_20171027.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/7. 데이터베이스/1. 데이터베이스 I_V6.7_20171027.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/7. 데이터베이스/1. 데이터베이스 I_V6.7_20171027.pdf`,
   },
   {
     group: "computer-architecture",
@@ -120,7 +121,7 @@ const docs = [
     title: "CA와 System I - 1번째 파일",
     outputName: "ca-system-i-file-1.md",
     document: "1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/8. CA/1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/8. CA/1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf`,
   },
   {
     group: "computer-architecture",
@@ -128,7 +129,7 @@ const docs = [
     title: "CA와 System I - 2번째 파일",
     outputName: "ca-system-i-file-2.md",
     document: "2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/8. CA/2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/8. CA/2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf`,
   },
   {
     group: "operating-system",
@@ -136,7 +137,7 @@ const docs = [
     title: "Operating System",
     outputName: "operating-system.md",
     document: "1. OS(Operating System)_V3.0_20161220(수정본).pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/9. OS/1. OS(Operating System)_V3.0_20161220(수정본).pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/9. OS/1. OS(Operating System)_V3.0_20161220(수정본).pdf`,
   },
   {
     group: "fundamentals",
@@ -144,7 +145,7 @@ const docs = [
     title: "Data Structure",
     outputName: "data-structure.md",
     document: "1. Data Structure_V3.9.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/1. Data Structure_V3.9.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/1. Data Structure_V3.9.pdf`,
   },
   {
     group: "fundamentals",
@@ -152,7 +153,7 @@ const docs = [
     title: "Algorithm",
     outputName: "algorithm.md",
     document: "2. Algorithm V3.7.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/2. Algorithm V3.7.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/2. Algorithm V3.7.pdf`,
   },
   {
     group: "fundamentals",
@@ -160,7 +161,7 @@ const docs = [
     title: "AI",
     outputName: "ai.md",
     document: "3. AI V1.5.pdf",
-    source: "C:/Users/ssysis8/Downloads/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/3. AI V1.5.pdf",
+    source: `${sourceRoot}/9주차_신규_pdf (2) (2)/10.기타(표지없이 전체 4쪽모아찍기)/3. AI V1.5.pdf`,
   },
 ];
 

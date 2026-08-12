@@ -6,7 +6,7 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| OS-P1 | 1. OS(Operating System)_V3.0_20161220(수정본).pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\9. OS\1. OS(Operating System)_V3.0_20161220(수정본).pdf` | 196 | 1차 텍스트 추출 완료 |
+| OS-P1 | 1. OS(Operating System)_V3.0_20161220(수정본).pdf | `local-source\\9주차_신규_pdf (2) (2)\9. OS\1. OS(Operating System)_V3.0_20161220(수정본).pdf` | 196 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

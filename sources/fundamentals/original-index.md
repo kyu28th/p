@@ -6,9 +6,9 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| FD-P1 | 1. Data Structure_V3.9.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\1. Data Structure_V3.9.pdf` | 68 | 1차 텍스트 추출 완료 |
-| FD-P2 | 2. Algorithm V3.7.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\2. Algorithm V3.7.pdf` | 115 | 1차 텍스트 추출 완료 |
-| FD-P3 | 3. AI V1.5.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\3. AI V1.5.pdf` | 69 | 1차 텍스트 추출 완료 |
+| FD-P1 | 1. Data Structure_V3.9.pdf | `local-source\\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\1. Data Structure_V3.9.pdf` | 68 | 1차 텍스트 추출 완료 |
+| FD-P2 | 2. Algorithm V3.7.pdf | `local-source\\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\2. Algorithm V3.7.pdf` | 115 | 1차 텍스트 추출 완료 |
+| FD-P3 | 3. AI V1.5.pdf | `local-source\\9주차_신규_pdf (2) (2)\10.기타(표지없이 전체 4쪽모아찍기)\3. AI V1.5.pdf` | 69 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 

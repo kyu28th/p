@@ -6,8 +6,8 @@
 
 | ID | Document | Local path | Pages | Status |
 |---|---|---|---:|---|
-| CA-P1 | 1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\8. CA\1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf` | 207 | 1차 텍스트 추출 완료 |
-| CA-P2 | 2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf | `C:\Users\ssysis8\Downloads\9주차_신규_pdf (2) (2)\8. CA\2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf` | 77 | 1차 텍스트 추출 완료 |
+| CA-P1 | 1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf | `local-source\\9주차_신규_pdf (2) (2)\8. CA\1. CA(Computer Architecture)와 System I_V4.0_20161223(수정본)_1번째 화일.pdf` | 207 | 1차 텍스트 추출 완료 |
+| CA-P2 | 2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf | `local-source\\9주차_신규_pdf (2) (2)\8. CA\2. CA(Computer Architecture)와 System I_V4.1_20161228_2번째 찍는 화일.pdf` | 77 | 1차 텍스트 추출 완료 |
 
 ## 변환 원칙
 
