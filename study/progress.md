@@ -9,3 +9,4 @@
 - GitHub Private Repository와 로컬 저장소 연결 검증
 - 테스트 파일 commit/push 완료
 - 기본 repository 구조 생성 시작
+- 경영전략 PDF 2개를 `sources/management-strategy/` Markdown으로 1차 변환
