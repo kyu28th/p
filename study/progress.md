@@ -2,13 +2,15 @@
 
 ## Current Phase
 
-System design and data-structure stabilization.
+Topic-map and coverage baseline.
 
 The repository already contains source-derived Markdown and a past-exam database. The next shift is from storage to exam performance:
 
 ```text
 topic card -> timed answer -> review -> weak point -> spaced review
 ```
+
+The first repository-based topic map now identifies 54 canonical topics from 39 converted past-exam rounds. The main finding is that classic DB, OS, algorithm, testing, PMO, and requirements topics can be practiced now, while recent AI/security/cloud-native topics need current-source research before answer writing.
 
 ## Completed
 
@@ -23,14 +25,18 @@ topic card -> timed answer -> review -> weak point -> spaced review
 - Public-facing README wording minimized.
 - Local machine paths removed from committed source references.
 - Topic card, answer review, trend, and prediction templates created.
+- First topic map created in `study/topic-map.md`.
+- Source coverage status created in `study/exam-source-coverage.md`.
+- Latest-source research priorities created in `study/latest-research-priorities.md`.
+- Answer practice priorities created in `study/answer-practice-priorities.md`.
 
 ## Pending
 
 - HWP round 116 conversion.
-- First timed answer draft.
+- First timed answer draft from an `OK` topic.
 - First reviewed answer.
 - First answer-derived weak-point entry.
-- First trend note.
+- First current-source note for RAG, AI RMF, Zero Trust, or SBOM.
 - First evidence-based prediction.
 - First explicit past-exam to topic link.
 

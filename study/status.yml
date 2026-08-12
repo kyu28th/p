@@ -1,12 +1,13 @@
 project:
-  phase: "system-design"
+  phase: "topic-map-and-coverage-baseline"
   final_goal: "pass-written-exam"
   success_metric: "write high-quality answers within time limits"
   official_standard_current: "2023-01-01 ~ 2026-12-31"
   official_standard_next: "2027-01-01 ~ 2030-12-31"
   source_age_note: "Most ingested PDFs are old source material and require current checks."
-  past_exam_note: "39 PDF rounds converted; rounds 99, 101, 102 manually restored; round 116 HWP pending."
-  overall_progress_percent: 22
+  past_exam_note: "39 converted rounds analyzed; rounds 99, 101, 102 manually restored; round 116 HWP pending."
+  topic_map_note: "54 canonical topics identified in the first repository-based map."
+  overall_progress_percent: 28
 
 repositories:
   public_safety:
@@ -23,8 +24,8 @@ areas:
     percent: 2
     status: "template created; one sample card exists"
   past_exam_linking:
-    percent: 1
-    status: "schema created; links not yet populated"
+    percent: 20
+    status: "first topic map created; per-question topic links not yet populated"
   answer_practice:
     percent: 0
     status: "lifecycle defined; no real answer yet"
@@ -32,20 +33,27 @@ areas:
     percent: 0
     status: "structure defined; no answer-derived weak points yet"
   trends:
-    percent: 0
-    status: "role defined; first trend not yet created"
+    percent: 10
+    status: "latest-source research priorities listed"
   predictions:
-    percent: 0
-    status: "role defined; first prediction not yet created"
+    percent: 5
+    status: "recent and increasing topics identified"
+
+coverage:
+  ok: 17
+  partial: 15
+  new_gap: 14
+  update_needed: 7
+  review_needed: 1
 
 next_actions:
   - priority: 1
-    action: "Review existing SEP topic card against the new topic-card template."
+    action: "Create the first answer draft from an OK high-frequency topic."
   - priority: 2
-    action: "Create the first real answer draft from a recent past-exam question."
+    action: "Create topic card for software testing and QA."
   - priority: 3
-    action: "Create one trend note for a critical current gap such as generative AI, AI governance, Zero Trust, or SBOM."
+    action: "Research one Priority 1 current gap such as RAG, AI RMF, Zero Trust, or SBOM."
   - priority: 4
-    action: "Create the first past-exam to topic link while promoting a question into a topic card."
+    action: "Link the practiced question to study/topic-map.md."
   - priority: 5
     action: "Decide whether full source extractions are suitable for a public repository."

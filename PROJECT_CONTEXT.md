@@ -64,3 +64,13 @@ study/status.yml -> study/dashboard.md
 3. 답안 lifecycle을 실제 답안 파일에 적용한다.
 4. `trends/`에 최신 중요 주제 1개를 등록한다.
 5. `predictions/`에 근거가 있는 예상문제 형식을 만든다.
+
+## Topic Map Baseline
+
+- 분석된 기출: `past-exams/information-management/`의 변환 완료 39회차.
+- 미처리 기출: 116회 HWP.
+- 1차 canonical topic 수: 54개.
+- 커버리지 판정: `OK` 17, `PARTIAL` 15, `NEW_GAP` 14, `UPDATE_NEEDED` 7, `REVIEW_NEEDED` 1.
+- 최근 증가 주제: LLM/RAG, AI RMF/ISO 42001, AI 법/윤리, OWASP LLM/Prompt Injection/Model Inversion, Zero Trust, SBOM, Kubernetes/Cloud Native, Data Observability, AI 학습데이터 품질.
+- 즉시 답안 연습 가능 주제: SW 테스트/품질, 데이터 품질, 트랜잭션/격리수준, 정규화/반정규화, PMO/감리, 요구공학, Agile/DevOps 기본, WBS/EVM.
+- 다음 우선순위는 자료량 증가가 아니라 `OK` 토픽 답안 작성과 `NEW_GAP` 토픽 최신 근거 보강이다.
