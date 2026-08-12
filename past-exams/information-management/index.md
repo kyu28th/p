@@ -14,8 +14,8 @@ This directory stores Markdown extractions of user-provided 정보관리기술�
 | 96 | 2012 | PDF | 5 | 31 | converted | `C:\Users\ssysis8\Downloads\제96회_정보관리기술사(2012년).pdf` |
 | 98 | 2012 | PDF | 8 | 33 | converted | `C:\Users\ssysis8\Downloads\제98회_정보관리기술사(2012년).pdf` |
 | 99 | 2013 | PDF | 5 | 31 | manually restored from screenshots | `C:\Users\ssysis8\Downloads\제99회_정보관리기술사(2013년).pdf` |
-| 101 | 2013 | PDF | 8 | 0 | converted | `C:\Users\ssysis8\Downloads\제101회 정보관리기술사(2013년).pdf` |
-| 102 | 2014 | PDF | 8 | 0 | converted | `C:\Users\ssysis8\Downloads\제102회 정보관리기술사(2014년).pdf` |
+| 101 | 2013 | PDF | 8 | 31 | manually restored from page images | `C:\Users\ssysis8\Downloads\제101회 정보관리기술사(2013년).pdf` |
+| 102 | 2014 | PDF | 8 | 31 | manually restored from page images | `C:\Users\ssysis8\Downloads\제102회 정보관리기술사(2014년).pdf` |
 | 104 | 2014 | PDF | 6 | 31 | converted | `C:\Users\ssysis8\Downloads\제104회 정보관리기술사(2014년).pdf` |
 | 105 | 2015 | PDF | 7 | 27 | converted | `C:\Users\ssysis8\Downloads\제105회 정보관리기술사(2015).pdf` |
 | 107 | 2015 | PDF | 5 | 24 | converted | `C:\Users\ssysis8\Downloads\제107회 정보관리기술사(2015년).pdf` |
@@ -54,4 +54,5 @@ This directory stores Markdown extractions of user-provided 정보관리기술�
 - Question candidates are extracted heuristically from the PDF text.
 - Each round file preserves page-level text using `## Page N` headings.
 - Round 99 was manually restored from user-provided screenshots because the original PDF had no extractable text.
+- Rounds 101 and 102 were manually restored from user-provided page images because the original PDFs had no extractable text.
 - Round 116 is currently HWP and requires a separate HWP conversion path.

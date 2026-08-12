@@ -3,7 +3,7 @@ project:
   official_standard_current: "2023-01-01 ~ 2026-12-31"
   official_standard_next: "2027-01-01 ~ 2030-12-31"
   source_age_note: "Most ingested PDFs are 2016-2017 versions with 2019 timestamps."
-  past_exam_note: "39 PDF rounds converted; round 99 manually restored; round 116 HWP pending; rounds 101, 102 need OCR."
+  past_exam_note: "39 PDF rounds converted; rounds 99, 101, 102 manually restored; round 116 HWP pending."
   overall_progress_percent: 22
 
 areas:

@@ -16,7 +16,8 @@
 - 첫 토픽 카드 생성: `knowledge/management/strategy/standard-essential-patent.md`
 - 정보관리기술사 기출 PDF 39개를 `past-exams/information-management/` 아래 회차별 Markdown으로 1차 변환
 - 99회는 사용자 제공 이미지 5장으로 수동 복원 완료
-- 116회 HWP는 변환 대기, 101/102회는 이미지 PDF로 OCR 필요
+- 101회와 102회는 사용자 제공 페이지 이미지로 수동 복원 완료
+- 116회 HWP는 변환 대기
 
 ## 현행성 주의
 
