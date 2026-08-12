@@ -1,0 +1,28 @@
+# Local secrets and environment
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Original source files kept outside the repository
+*.pdf
+*.ppt
+*.pptx
+*.hwp
+*.hwpx
+*.doc
+*.docx
+
+# Local conversion/output scratch
+tmp/
+temp/
+scratch/
+local-source/
+LOCAL_SOURCE_ROOT/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
