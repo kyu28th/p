@@ -3,7 +3,8 @@ project:
   official_standard_current: "2023-01-01 ~ 2026-12-31"
   official_standard_next: "2027-01-01 ~ 2030-12-31"
   source_age_note: "Most ingested PDFs are 2016-2017 versions with 2019 timestamps."
-  overall_progress_percent: 20
+  past_exam_note: "39 PDF rounds converted; round 116 HWP pending; rounds 99, 101, 102 need OCR."
+  overall_progress_percent: 22
 
 areas:
   management_strategy:
@@ -91,3 +92,8 @@ recommended_study:
     pages: "Page 8~10"
     topic: "FRAND"
     reason: "표준특허와 연결되는 다음 카드 후보"
+  - priority: 5
+    source: "past-exams/information-management/139.md"
+    pages: "Page 1~8"
+    topic: "139회 기출 훑기"
+    reason: "최신 회차 출제경향 확인"

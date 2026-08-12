@@ -14,6 +14,8 @@
 - Q-Net 공식 출제기준 기간을 확인하고 `exam/current-exam-standard.md`에 기준점 기록
 - `study/dashboard.md`, `study/status.yml`, `study/coverage-gap.md` 생성
 - 첫 토픽 카드 생성: `knowledge/management/strategy/standard-essential-patent.md`
+- 정보관리기술사 기출 PDF 39개를 `past-exams/information-management/` 아래 회차별 Markdown으로 1차 변환
+- 116회 HWP는 변환 대기, 99/101/102회는 이미지 PDF로 OCR 필요
 
 ## 현행성 주의
 

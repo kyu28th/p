@@ -8,7 +8,8 @@
 | Official current standard | 2023-01-01 ~ 2026-12-31 |
 | Official next standard | 2027-01-01 ~ 2030-12-31 |
 | Source age | Mostly 2016-2017 versions, 2019 timestamps |
-| Overall progress | ██░░░░░░░░ 20% |
+| Past exams | 39 PDF rounds converted, 1 HWP pending, 3 image-PDF rounds need OCR |
+| Overall progress | ██░░░░░░░░ 22% |
 
 ## Key Warning
 
@@ -36,6 +37,7 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 | 2 | `study/coverage-gap.md` | - | 누락/취약 토픽 확인 | 구자료 기반 학습의 위험 줄이기 |
 | 3 | `knowledge/management/strategy/standard-essential-patent.md` | Page 4~6 | 표준특허 | 첫 번째 토픽 카드 복습 |
 | 4 | `sources/management-strategy/part-ii.md` | Page 8~10 | FRAND | 표준특허와 연결되는 다음 카드 후보 |
+| 5 | `past-exams/information-management/139.md` | Page 1~8 | 139회 기출 훑기 | 최신 회차 출제경향 확인 |
 
 ## Critical Gaps
 
@@ -57,4 +59,6 @@ Freshness-sensitive areas must be checked against the current Q-Net standard and
 - [ ] Compare the 2027-2030 standard before preparing for a 2027 exam.
 - [x] Promote one sample topic from `sources/` to `knowledge/`.
 - [ ] Create FRAND topic card from `sources/management-strategy/part-ii.md` Page 8~10.
+- [ ] Review latest past exam: `past-exams/information-management/139.md`.
+- [ ] OCR or convert missing-text rounds: 99, 101, 102, and HWP round 116.
 - [ ] Add the first `trends/` topic for a critical gap.
