@@ -11,6 +11,8 @@
 - 기본 repository 구조 생성 시작
 - 경영전략 PDF 2개를 `sources/management-strategy/` Markdown으로 1차 변환
 - 9주차 신규 PDF 묶음 전체를 `sources/` 아래 페이지 단위 Markdown으로 1차 변환
+- Q-Net 공식 출제기준 기간을 확인하고 `exam/current-exam-standard.md`에 기준점 기록
+- `study/dashboard.md`, `study/status.yml`, `study/coverage-gap.md` 생성
 
 ## 현행성 주의
 

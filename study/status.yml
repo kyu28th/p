@@ -1,0 +1,89 @@
+project:
+  phase: "source-ingestion-complete"
+  official_standard_current: "2023-01-01 ~ 2026-12-31"
+  official_standard_next: "2027-01-01 ~ 2030-12-31"
+  source_age_note: "Most ingested PDFs are 2016-2017 versions with 2019 timestamps."
+  overall_progress_percent: 20
+
+areas:
+  management_strategy:
+    label: "경영전략"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "needs-current-check"
+  software_engineering:
+    label: "SW공학"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "needs-current-check"
+  database:
+    label: "데이터베이스"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "needs-current-check"
+  system_architecture:
+    label: "시스템/아키텍처"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "needs-current-check"
+  network_service:
+    label: "네트워크/디지털서비스"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "needs-current-check"
+  security:
+    label: "정보보안"
+    source_ingestion: 100
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 20
+    risk: "critical-current-check"
+  latest_tech_policy:
+    label: "최신기술/법규/정책"
+    source_ingestion: 40
+    topic_organization: 0
+    problem_practice: 0
+    answer_writing: 0
+    freshness_check: 0
+    overall: 8
+    risk: "critical-gap"
+
+recommended_study:
+  - priority: 1
+    source: "exam/current-exam-standard.md"
+    pages: "-"
+    topic: "공식 출제기준 확인"
+    reason: "현재/다음 출제기준을 학습 범위의 기준점으로 삼아야 함"
+  - priority: 2
+    source: "study/coverage-gap.md"
+    pages: "-"
+    topic: "누락/취약 토픽 확인"
+    reason: "구자료 기반 학습의 위험을 줄이기 위함"
+  - priority: 3
+    source: "sources/management-strategy/part-ii.md"
+    pages: "Page 4~6"
+    topic: "표준특허"
+    reason: "출처 페이지 추적 검증용 샘플"
+
