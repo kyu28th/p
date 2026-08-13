@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7f9;
+      --surface: #ffffff;
+      --surface-soft: #eef3f5;
+      --ink: #172026;
+      --muted: #66747f;
+      --line: #d8e0e5;
+      --blue: #2364aa;
+      --green: #1c7c54;
+      --amber: #a45c00;
+      --red: #b23a48;
+      --violet: #6b4ea0;
+      --shadow: 0 10px 24px rgba(23, 32, 38, 0.08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(244, 247, 249, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .subtle {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 7px;
+      padding: 8px 11px;
+      font-size: 13px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    button:hover,
+    button.active {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: #eef6ff;
+    }
+
+    main { padding: 22px 0 40px; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-height: 104px;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .metric .value {
+      margin-top: 8px;
+      font-size: 28px;
+      font-weight: 780;
+    }
+
+    .metric .note {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .progress {
+      height: 9px;
+      margin-top: 10px;
+      overflow: hidden;
+      background: #e8edf1;
+      border-radius: 999px;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--blue);
+      border-radius: inherit;
+    }
+
+    .alert {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border: 1px solid #f1d3a7;
+      border-left: 5px solid var(--amber);
+      border-radius: var(--radius);
+      background: #fff8ed;
+      color: #533400;
+      font-size: 14px;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 10px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: clip;
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 0;
+      font-weight: 780;
+    }
+
+    .chevron {
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    details[open] .chevron { transform: rotate(90deg); }
+
+    .section-stats {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .section-stats .mini-progress {
+      width: 96px;
+    }
+
+    .panel {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding-top: 14px;
+    }
+
+    .topic-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 150px;
+      gap: 14px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfd;
+    }
+
+    .topic-card.hidden { display: none; }
+
+    .topic-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .topic-name {
+      overflow: hidden;
+      font-weight: 760;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .topic-meta,
+    .topic-notes {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      height: 22px;
+      border-radius: 999px;
+      padding: 0 8px;
+      font-size: 11px;
+      font-weight: 750;
+      background: var(--surface-soft);
+      color: var(--muted);
+    }
+
+    .badge.ok { background: #e9f7ef; color: var(--green); }
+    .badge.partial { background: #fff3dd; color: var(--amber); }
+    .badge.gap { background: #fdebed; color: var(--red); }
+    .badge.update { background: #eef0ff; color: var(--violet); }
+    .badge.review { background: #eceff1; color: #45525b; }
+    .badge.due { background: #fff3dd; color: var(--amber); }
+    .badge.weak { background: #fdebed; color: var(--red); }
+    .badge.stable { background: #e9f7ef; color: var(--green); }
+
+    .scorebox {
+      border-left: 1px solid var(--line);
+      padding-left: 14px;
+    }
+
+    .score-main {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .score-main strong {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .score-main span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .mini-progress,
+    .scorebar {
+      height: 7px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e8edf1;
+    }
+
+    .mini-progress span,
+    .scorebar span {
+      display: block;
+      height: 100%;
+      background: var(--blue);
+      border-radius: inherit;
+    }
+
+    .scorebar { margin: 8px 0 10px; }
+
+    .dims {
+      display: grid;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .dim {
+      display: grid;
+      grid-template-columns: 42px 1fr 25px;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dim .mini-progress { height: 5px; }
+
+    .empty {
+      padding: 18px 0 4px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .toolbar { justify-content: flex-start; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards { grid-template-columns: 1fr; }
+      .topic-card { grid-template-columns: 1fr; }
+      .scorebox {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 12px 0 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 20px, 1180px); }
+      .summary-grid { grid-template-columns: 1fr; }
+      .alert { flex-direction: column; }
+      summary { align-items: flex-start; flex-direction: column; }
+      .section-stats { width: 100%; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div>
+        <h1>학습 대시보드</h1>
+        <div class="subtle">2026-08-13 기준 · 140회는 2026-08-22까지 unseen set</div>
+      </div>
+      <nav class="toolbar" aria-label="dashboard controls">
+        <button type="button" id="expandAll">전체 펼침</button>
+        <button type="button" id="collapseAll">전체 접힘</button>
+        <button type="button" data-filter="all" class="active">전체</button>
+        <button type="button" data-filter="due">복습</button>
+        <button type="button" data-filter="weak">약점</button>
+        <button type="button" data-filter="unmeasured">미측정</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="summary-grid" aria-label="summary">
+      <article class="metric">
+        <div class="label">Overall</div>
+        <div class="value">29%</div>
+        <div class="progress"><span style="width:29%"></span></div>
+        <div class="note">시스템+학습 기준 통합 진행</div>
+      </article>
+      <article class="metric">
+        <div class="label">Mock Exam</div>
+        <div class="value" id="dday">D-?</div>
+        <div class="note">2026-08-22 · 400분 baseline</div>
+      </article>
+      <article class="metric">
+        <div class="label">Studied</div>
+        <div class="value">1 / 54</div>
+        <div class="progress"><span style="width:2%"></span></div>
+        <div class="note">현재 실제 측정 토픽: WBS</div>
+      </article>
+      <article class="metric">
+        <div class="label">Answer Practice</div>
+        <div class="value">0</div>
+        <div class="note">작성 능력은 아직 미측정</div>
+      </article>
+    </section>
+
+    <section class="alert">
+      <strong>Round 140 unseen</strong>
+      <span>2026-08-22 baseline 전까지 일반 학습, 예시, 추천, 예상문제에 140회 내용을 쓰지 않는다.</span>
+    </section>
+
+    <section class="accordion" id="accordion"></section>
+  </main>
+
+  <script>
+    const topics = [
+      {
+        id: "T-037",
+        name: "WBS",
+        group: "Due Review",
+        domain: "Management / Project Control",
+        status: "OK",
+        exam: "102, 128, 129, 139",
+        nextReview: "2026-08-14",
+        measured: true,
+        flags: ["due", "weak"],
+        dims: { understanding: 3, recall: 3, structure: 1, writing: null },
+        strengths: ["Work Package", "100% Rule"],
+        weak: ["hierarchical_decomposition", "wbs_principles", "question_requirement_to_outline"],
+        note: "Day 1 측정 완료. 복습은 reread가 아니라 active recall부터."
+      },
+      { id: "T-033", name: "Software testing and QA", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "092, 095, 096, 098, 101, 105, 108, 114, 117, 120, 122, 126, 127, 129, 131, 133, 134, 135, 136, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "최고 빈도. 첫 답안 연습 후보." },
+      { id: "T-014", name: "Data quality and governance", group: "OK Topics", domain: "Data", status: "OK", exam: "123, 126, 128, 131, 132, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "AI 학습데이터 품질과 연결." },
+      { id: "T-019", name: "Distributed database", group: "OK Topics", domain: "Database", status: "OK", exam: "102, 117, 132, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "투명성, 분산/병렬 비교." },
+      { id: "T-020", name: "Transaction and isolation", group: "OK Topics", domain: "Database", status: "OK", exam: "107, 129, 134, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "10점형 답안 연습 적합." },
+      { id: "T-021", name: "Normalization and denormalization", group: "OK Topics", domain: "Database", status: "OK", exam: "095, 118, 125, 129, 135", measured: false, flags: ["unmeasured"], dims: {}, note: "정의+절차+장단점 구조." },
+      { id: "T-022", name: "Database indexing", group: "OK Topics", domain: "Database", status: "OK", exam: "095, 098, 136", measured: false, flags: ["unmeasured"], dims: {}, note: "짧은 설명형 후보." },
+      { id: "T-025", name: "Cloud computing basics", group: "OK Topics", domain: "Cloud", status: "OK", exam: "099, 101, 102, 130, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "클라우드 네이티브와 분리해서 관리." },
+      { id: "T-030", name: "Network fundamentals", group: "OK Topics", domain: "Network", status: "OK", exam: "092, 099, 102, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "서브넷, 오류제어, 해시 기초." },
+      { id: "T-031", name: "OS fundamentals", group: "OK Topics", domain: "OS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "가상메모리, 교착상태, inode." },
+      { id: "T-032", name: "Data structures and algorithms", group: "OK Topics", domain: "CS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "B-tree, stack, sort, linked list." },
+      { id: "T-035", name: "Requirements engineering", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "102, 107, 114, 123, 124, 130, 133, 135, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "요구사항 품질저하와 연결." },
+      { id: "T-036", name: "Agile, Scrum, Kanban, DevOps", group: "OK Topics", domain: "Software Process", status: "OK", exam: "098, 099, 101, 105, 111, 113, 119, 129, 131", measured: false, flags: ["unmeasured"], dims: {}, note: "DevSecOps와 연결." },
+      { id: "T-038", name: "PMO and audit", group: "OK Topics", domain: "Management", status: "OK", exam: "098, 102, 105, 111, 117, 118, 121, 129, 136, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "감리/PMO 비교형 빈출." },
+      { id: "T-040", name: "Re-engineering and 3R", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "095, 114, 119, 133, 137, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "정의+비교+절차." },
+      { id: "T-041", name: "SW maintenance and deployment", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "102, 134", measured: false, flags: ["unmeasured"], dims: {}, note: "배포전략/테스트전략 연결." },
+      { id: "T-042", name: "Function point and estimation", group: "OK Topics", domain: "Management / Software", status: "OK", exam: "102, 104, 128", measured: false, flags: ["unmeasured"], dims: {}, note: "계산형/비교형." },
+      { id: "T-043", name: "UML and modeling", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "101, 114", measured: false, flags: ["unmeasured"], dims: {}, note: "stereotype, modeling." },
+      { id: "T-044", name: "Security fundamentals", group: "OK Topics", domain: "Security", status: "OK", exam: "092, 101, 102, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "암호, 해시, TLS, 접근통제." },
+      { id: "T-053", name: "SW quality standards", group: "OK Topics", domain: "Software Quality", status: "OK", exam: "105, 120, 126, 136", measured: false, flags: ["unmeasured"], dims: {}, note: "SQuaRE, SPICE, CMMI." },
+      { id: "T-018", name: "NoSQL, CAP, PACELC", group: "PARTIAL Topics", domain: "Database", status: "PARTIAL", exam: "093, 114, 117, 124, 126, 128, 133", measured: false, flags: ["unmeasured"], dims: {}, note: "CAP은 기반 있음. PACELC 답안 프레임 보강 필요." },
+      { id: "T-015", name: "Data Lake and modern data platform", group: "PARTIAL Topics", domain: "Data", status: "PARTIAL", exam: "119, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "Lakehouse/Fabric/Mesh는 최신 보강 필요." },
+      { id: "T-023", name: "Data mining and outlier/bias", group: "PARTIAL Topics", domain: "Data Analytics", status: "PARTIAL", exam: "098, 101, 102, 130, 136, 137, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "전통 분석+AI 편향 프레임 결합." },
+      { id: "T-024", name: "Big data analytics and visualization", group: "PARTIAL Topics", domain: "Data Analytics", status: "PARTIAL", exam: "102, 135, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "모델평가/시각화 구조화 필요." },
+      { id: "T-026", name: "Cloud SLA and service catalogue", group: "PARTIAL Topics", domain: "Cloud / ITSM", status: "PARTIAL", exam: "095, 101, 102, 130, 137, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "공공/금융 SLA 최신 맥락 필요." },
+      { id: "T-039", name: "ITSM and service transition", group: "PARTIAL Topics", domain: "Service Management", status: "PARTIAL", exam: "101, 102, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "인수인계/운영전환 답안화 필요." },
+      { id: "T-046", name: "Blockchain and distributed ledger", group: "PARTIAL Topics", domain: "Emerging / Data", status: "PARTIAL", exam: "113, 118, 120", measured: false, flags: ["unmeasured"], dims: {}, note: "현 출제 우선순위는 낮음." },
+      { id: "T-048", name: "Web, API, UX, accessibility", group: "PARTIAL Topics", domain: "Digital Service", status: "PARTIAL", exam: "101, 102, 107", measured: false, flags: ["unmeasured"], dims: {}, note: "웹 API/플랫폼 거버넌스 보강." },
+      { id: "T-049", name: "Mobile, IoT, embedded, BYOD", group: "PARTIAL Topics", domain: "Digital Service", status: "PARTIAL", exam: "099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "구형 자료 기반, 최신성 낮음." },
+      { id: "T-050", name: "DR, BCP, IDC location", group: "PARTIAL Topics", domain: "Infra / Management", status: "PARTIAL", exam: "102, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "RTO/RPO와 지리적 이중화." },
+      { id: "T-051", name: "Enterprise systems", group: "PARTIAL Topics", domain: "Management / SW", status: "PARTIAL", exam: "101, 102, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "EIP, SCM, groupware." },
+      { id: "T-052", name: "Open source governance", group: "PARTIAL Topics", domain: "SW / Policy", status: "PARTIAL", exam: "101, 102, 133", measured: false, flags: ["unmeasured"], dims: {}, note: "SBOM과 연결 필요." },
+      { id: "T-010", name: "DevSecOps and SW security quality", group: "PARTIAL Topics", domain: "SW / Security", status: "PARTIAL", exam: "135, 136", measured: false, flags: ["unmeasured"], dims: {}, note: "DevOps 기반은 있으나 보안 파이프라인 보강." },
+      { id: "T-001", name: "AI risk and governance", group: "NEW_GAP Topics", domain: "AI / Policy", status: "NEW_GAP", exam: "136, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "AI RMF, governance 최신자료 필요." },
+      { id: "T-002", name: "Generative AI and LLM", group: "NEW_GAP Topics", domain: "AI", status: "NEW_GAP", exam: "130, 135, 136, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "LLM, fine-tuning, RLHF, AX." },
+      { id: "T-003", name: "RAG", group: "NEW_GAP Topics", domain: "AI", status: "NEW_GAP", exam: "134, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "Advanced/Modular RAG 최신 보강 최우선." },
+      { id: "T-004", name: "AI security", group: "NEW_GAP Topics", domain: "AI / Security", status: "NEW_GAP", exam: "136, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "Prompt Injection, Model Inversion, OWASP LLM." },
+      { id: "T-006", name: "AI law, ethics, and standards", group: "NEW_GAP Topics", domain: "Policy / AI", status: "NEW_GAP", exam: "136, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "AI 기본법, ISO/IEC 42001." },
+      { id: "T-007", name: "AI infrastructure", group: "NEW_GAP Topics", domain: "Architecture / AI", status: "NEW_GAP", exam: "138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "GPU/TPU, AI-native network, QML." },
+      { id: "T-008", name: "Zero Trust", group: "NEW_GAP Topics", domain: "Security", status: "NEW_GAP", exam: "131, 135, 136", measured: false, flags: ["unmeasured"], dims: {}, note: "성숙도모델 2.0 포함." },
+      { id: "T-009", name: "Supply-chain security and SBOM", group: "NEW_GAP Topics", domain: "Security / SW", status: "NEW_GAP", exam: "131, 134, 136", measured: false, flags: ["unmeasured"], dims: {}, note: "SBOM 기반 OSS 관리." },
+      { id: "T-011", name: "CTEM", group: "NEW_GAP Topics", domain: "Security", status: "NEW_GAP", exam: "139", measured: false, flags: ["unmeasured"], dims: {}, note: "Continuous Threat Exposure Management." },
+      { id: "T-017", name: "Data Observability", group: "NEW_GAP Topics", domain: "Data Ops", status: "NEW_GAP", exam: "138", measured: false, flags: ["unmeasured"], dims: {}, note: "데이터 운영 관측가능성." },
+      { id: "T-027", name: "Cloud native, Kubernetes, MultiCloud", group: "NEW_GAP Topics", domain: "Cloud Architecture", status: "NEW_GAP", exam: "133, 135, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "Kubernetes와 전환 프로젝트." },
+      { id: "T-028", name: "Edge computing", group: "NEW_GAP Topics", domain: "Architecture / Network", status: "NEW_GAP", exam: "139", measured: false, flags: ["unmeasured"], dims: {}, note: "Cloud vs Edge 비교." },
+      { id: "T-029", name: "Network evolution", group: "NEW_GAP Topics", domain: "Network", status: "NEW_GAP", exam: "130, 135, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "6G, Wi-Fi 7, AI-native network." },
+      { id: "T-005", name: "AI training data quality", group: "UPDATE_NEEDED Topics", domain: "Data / AI", status: "UPDATE_NEEDED", exam: "128, 131, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "데이터 품질 기반은 있으나 AI 지침 최신화 필요." },
+      { id: "T-012", name: "Ransomware and cyber insurance", group: "UPDATE_NEEDED Topics", domain: "Security", status: "UPDATE_NEEDED", exam: "138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "최신 위협/리스크 전가 맥락." },
+      { id: "T-013", name: "PET and pseudonymization", group: "UPDATE_NEEDED Topics", domain: "Security / Data", status: "UPDATE_NEEDED", exam: "134, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "동형암호, 차분프라이버시, 합성데이터." },
+      { id: "T-016", name: "Data valuation and assetization", group: "UPDATE_NEEDED Topics", domain: "Data / Management", status: "UPDATE_NEEDED", exam: "135, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "데이터 거래/자산화 정책 최신화." },
+      { id: "T-034", name: "AI software testing and quality", group: "UPDATE_NEEDED Topics", domain: "AI / SW", status: "UPDATE_NEEDED", exam: "135, 136, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "Metamorphic test, neuron coverage." },
+      { id: "T-045", name: "Privacy law and MyData", group: "UPDATE_NEEDED Topics", domain: "Law / Security", status: "UPDATE_NEEDED", exam: "102, 118, 134, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "개인정보/마이데이터 법제 최신화." },
+      { id: "T-047", name: "Digital platform and public data policy", group: "UPDATE_NEEDED Topics", domain: "Policy / Management", status: "UPDATE_NEEDED", exam: "102, 123, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "디지털정부/공공데이터 정책." },
+      { id: "T-054", name: "Emerging policy and industry AI use cases", group: "REVIEW_NEEDED Topics", domain: "Policy / Emerging", status: "REVIEW_NEEDED", exam: "135, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "QML, VPP AI, AI 디지털교과서 등 범위 확인 필요." }
+    ];
+
+    const groupOrder = [
+      "Due Review",
+      "OK Topics",
+      "PARTIAL Topics",
+      "NEW_GAP Topics",
+      "UPDATE_NEEDED Topics",
+      "REVIEW_NEEDED Topics"
+    ];
+
+    const statusClass = {
+      OK: "ok",
+      PARTIAL: "partial",
+      NEW_GAP: "gap",
+      UPDATE_NEEDED: "update",
+      REVIEW_NEEDED: "review"
+    };
+
+    const statusBase = {
+      OK: 20,
+      PARTIAL: 10,
+      NEW_GAP: 0,
+      UPDATE_NEEDED: 6,
+      REVIEW_NEEDED: 0
+    };
+
+    function dimPercent(value) {
+      return value == null ? 0 : Math.max(0, Math.min(100, value * 20));
+    }
+
+    function integratedProgress(topic) {
+      if (topic.measured) {
+        const d = topic.dims;
+        return Math.round(
+          dimPercent(d.understanding) * 0.25 +
+          dimPercent(d.recall) * 0.30 +
+          dimPercent(d.structure) * 0.25 +
+          dimPercent(d.writing) * 0.20
+        );
+      }
+      return statusBase[topic.status] || 0;
+    }
+
+    function dimLabel(value) {
+      return value == null ? "-" : `${value}/5`;
+    }
+
+    function badge(text, cls = "") {
+      return `<span class="badge ${cls}">${text}</span>`;
+    }
+
+    function renderDims(topic) {
+      const d = topic.dims || {};
+      const rows = [
+        ["이해", d.understanding],
+        ["회상", d.recall],
+        ["구조", d.structure],
+        ["작성", d.writing]
+      ];
+      return rows.map(([label, value]) => {
+        const pct = dimPercent(value);
+        return `
+          <div class="dim">
+            <span>${label}</span>
+            <span class="mini-progress"><span style="width:${pct}%"></span></span>
+            <span>${dimLabel(value)}</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderTopic(topic) {
+      const progress = integratedProgress(topic);
+      const badges = [
+        badge(topic.status, statusClass[topic.status]),
+        topic.measured ? badge("측정", "stable") : badge("미측정", "review"),
+        ...(topic.flags || []).filter(flag => flag !== "unmeasured").map(flag => {
+          if (flag === "due") return badge("복습", "due");
+          if (flag === "weak") return badge("약점", "weak");
+          return badge(flag);
+        })
+      ].join("");
+
+      return `
+        <article class="topic-card" data-flags="${(topic.flags || []).join(" ")}" data-status="${topic.status}">
+          <div>
+            <div class="topic-head">
+              <span class="badge">${topic.id}</span>
+              <div class="topic-name" title="${topic.name}">${topic.name}</div>
+            </div>
+            <div class="topic-meta">${topic.domain} · 기출 ${topic.exam}</div>
+            <div class="badges">${badges}</div>
+            <div class="topic-notes">${topic.note}</div>
+            ${topic.weak ? `<div class="topic-notes">Weak: ${topic.weak.join(", ")}</div>` : ""}
+            ${topic.nextReview ? `<div class="topic-notes">Next review: ${topic.nextReview}</div>` : ""}
+          </div>
+          <div class="scorebox">
+            <div class="score-main"><strong>${progress}%</strong><span>통합</span></div>
+            <div class="scorebar"><span style="width:${progress}%"></span></div>
+            <div class="dims">${renderDims(topic)}</div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderSection(group, list, open = false) {
+      const average = list.length
+        ? Math.round(list.reduce((sum, topic) => sum + integratedProgress(topic), 0) / list.length)
+        : 0;
+      return `
+        <details ${open ? "open" : ""} data-group="${group}">
+          <summary>
+            <div class="section-title">
+              <span class="chevron">›</span>
+              <span>${group}</span>
+            </div>
+            <div class="section-stats">
+              <span>${list.length}개</span>
+              <span>평균 ${average}%</span>
+              <span class="mini-progress"><span style="width:${average}%"></span></span>
+            </div>
+          </summary>
+          <div class="panel">
+            <div class="cards">${list.map(renderTopic).join("")}</div>
+            <div class="empty" hidden>현재 필터에 해당하는 카드가 없습니다.</div>
+          </div>
+        </details>
+      `;
+    }
+
+    function render() {
+      const root = document.querySelector("#accordion");
+      const grouped = groupOrder.map(group => [
+        group,
+        topics.filter(topic => topic.group === group)
+      ]);
+      root.innerHTML = grouped
+        .map(([group, list], index) => renderSection(group, list, index === 0 || group === "OK Topics"))
+        .join("");
+    }
+
+    function setFilter(filter) {
+      document.querySelectorAll("[data-filter]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.filter === filter);
+      });
+
+      document.querySelectorAll("details").forEach(section => {
+        let visibleCount = 0;
+        section.querySelectorAll(".topic-card").forEach(card => {
+          const flags = card.dataset.flags || "";
+          const status = card.dataset.status || "";
+          const show =
+            filter === "all" ||
+            flags.includes(filter) ||
+            (filter === "weak" && flags.includes("weak")) ||
+            (filter === "unmeasured" && flags.includes("unmeasured")) ||
+            filter === status;
+          card.classList.toggle("hidden", !show);
+          if (show) visibleCount += 1;
+        });
+        section.querySelector(".empty").hidden = visibleCount !== 0;
+        if (filter !== "all" && visibleCount > 0) section.open = true;
+      });
+    }
+
+    function setDday() {
+      const target = new Date("2026-08-22T00:00:00+09:00");
+      const now = new Date();
+      const diffDays = Math.ceil((target - now) / 86400000);
+      const text = diffDays >= 0 ? `D-${diffDays}` : `D+${Math.abs(diffDays)}`;
+      document.querySelector("#dday").textContent = text;
+    }
+
+    render();
+    setDday();
+
+    document.querySelector("#expandAll").addEventListener("click", () => {
+      document.querySelectorAll("details").forEach(section => section.open = true);
+    });
+
+    document.querySelector("#collapseAll").addEventListener("click", () => {
+      document.querySelectorAll("details").forEach(section => section.open = false);
+    });
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => setFilter(button.dataset.filter));
+    });
+  </script>
+</body>
+</html>
