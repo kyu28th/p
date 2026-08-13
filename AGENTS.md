@@ -65,3 +65,14 @@
 - For visuals, prefer simple exam-writable forms: architecture diagram, process flow, concept map, comparison matrix, layer diagram, lifecycle, sequence, classification diagram, and relationship diagram. The standard is whether the user can reproduce it by hand in 30 seconds to 1 minute.
 - Do not overbuild schemas, dashboards, metadata, scripts, directories, templates, or automations. Before creating system structure, ask whether it improves pass probability more than studying now. Learning comes before system construction.
 - At session end, record only structured information needed for the next session to continue accurately: work done, changed understanding, written answers, found weaknesses, review needs, next recommendation, and important decisions.
+
+## Learning Measurement Rules
+
+- Treat 2026-08-13 as Day 1 for the user's information-management PE study baseline. Do not assume high exam readiness from general IT work experience.
+- Store actual dated learning and recall evidence, not only topic status.
+- Keep historical measurements immutable. If memory is expected to decay, record that under current estimated state, not by changing the old measured score.
+- Track these abilities separately when evidence exists: understanding, recall, answer structure, writing, diagram/table use, keyword recall, insight/application, and time management.
+- Do not assume understanding implies recall. Do not assume recall implies answer-writing readiness.
+- Reviews should start with active recall questions before rereading source material.
+- Track strengths as well as weak points so stable knowledge is not retaught from zero every time.
+- For daily study selection, combine due review, weak recall, weak answer structure, new learning, and answer practice. Do not keep adding only new topics.

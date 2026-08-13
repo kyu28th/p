@@ -1,0 +1,127 @@
+topic_id: T-037
+topic: WBS
+canonical_name: Work Breakdown Structure
+domain: management/project-control
+coverage_status: OK
+
+dates:
+  first_studied: "2026-08-13"
+  last_studied: "2026-08-13"
+  last_tested: "2026-08-13"
+  last_reviewed: ""
+  next_review: "2026-08-14"
+  review_count: 0
+
+historical_measurements:
+  - date: "2026-08-13"
+    source: "Day 1 study session"
+    understanding: 3
+    recall: 3
+    answer_structure: 1
+    writing: null
+    notes:
+      - "This is an observed initial measurement, not a permanent ability score."
+      - "Writing is null because no timed full answer was written."
+
+current_estimated_state:
+  as_of: "2026-08-13"
+  days_since_last_test: 0
+  reviews_since_last_test: 0
+  understanding: 3
+  recall: 3
+  answer_structure: 1
+  writing: null
+  review_status: due_soon
+  reason: "Measured today; no forgetting adjustment applied yet. Next review is scheduled for the 1-day interval."
+
+strengths:
+  - concept: work_package
+    evidence: "Answered the lowest manageable WBS unit as Work Package."
+  - concept: 100_percent_rule
+    evidence: "Recalled that child work should sum to the parent scope, avoiding 95% omission or 105% excess."
+  - concept: understands_management_purpose
+    evidence: "Connected WBS to schedule, cost, assignment, and risk management."
+
+weak_points:
+  - concept: hierarchical_decomposition
+    type: recall
+    evidence: "Explained management purpose but did not spontaneously recall project-scope hierarchical decomposition."
+  - concept: wbs_principles
+    type: recall
+    evidence: "Could not recall another WBS principle beyond 100% Rule."
+  - concept: question_requirement_to_outline
+    type: answer_structure
+    evidence: "Outline did not directly reflect the requested writing principles."
+  - concept: technical_answer_expression
+    type: writing_readiness
+    evidence: "Concept recall was understandable but not yet expressed in exam-ready technical language."
+
+events:
+  - date: "2026-08-13"
+    type: learning
+    content:
+      - "WBS basic concept"
+      - "Work Package"
+      - "100% Rule"
+      - "WBS use for schedule, cost, assignment, and risk management"
+  - date: "2026-08-13"
+    type: recall_test
+    question: "Why is WBS needed?"
+    user_answer: "It is needed to manage schedule, cost, assignment, and risk."
+    result: partial_success
+    concept: management_purpose
+    interpretation: "Management purpose was understood, but project-scope hierarchical decomposition was not recalled spontaneously."
+  - date: "2026-08-13"
+    type: recall_test
+    question: "When WBS is decomposed continuously, what is the lowest manageable unit?"
+    user_answer: "Work Package"
+    result: success
+    concept: work_package
+  - date: "2026-08-13"
+    type: recall_test
+    question: "What is the 100% Rule in WBS?"
+    user_answer: "Work packages should sum to 100%, not 95% or 105%."
+    result: success
+    concept: 100_percent_rule
+    interpretation: "Concept and recall are correct even if expression is not yet polished technical wording."
+  - date: "2026-08-13"
+    type: outline_test
+    question: "Write only the outline for a question asking about the WBS concept and creation principles."
+    user_answer: "Concept / implementation method / effects"
+    result: partial_weak
+    concept: question_requirement_to_outline
+    interpretation: "General flow exists, but the outline did not explicitly reflect the requested creation principles."
+  - date: "2026-08-13"
+    type: recall_test
+    question: "Name one element or keyword other than WBS creation principles."
+    user_answer: "I do not know."
+    result: fail
+    concept: wbs_principles
+  - date: "2026-08-13"
+    type: final_recall
+    prompt: "Explain WBS after learning."
+    user_answer: "It decomposes work into work-package units to manage schedule, cost, and assignment."
+    result: partial_success
+    keywords_recalled:
+      - "Work Package"
+      - "management"
+    keywords_missing:
+      - "project total scope"
+      - "hierarchical decomposition"
+      - "100% Rule"
+
+review_plan:
+  base_intervals_days: [1, 3, 7, 14, 30]
+  next_active_recall_questions:
+    - "Define WBS in one sentence."
+    - "Name one WBS creation principle."
+    - "Explain the 100% Rule."
+    - "What is a Work Package?"
+    - "Make a 30-second outline for: Explain the concept and creation principles of WBS."
+  must_check_keywords_next_time:
+    - "hierarchical decomposition"
+    - "100% Rule"
+    - "Work Package"
+    - "WBS Dictionary"
+    - "scope baseline"
+    - "schedule/cost/risk basis"

@@ -33,10 +33,16 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 - Answer practice priorities created in `study/answer-practice-priorities.md`.
 - 2026-08-22 baseline mock-exam plan created in `study/2026-08-22-baseline-plan.md`.
 - Round 140 unseen-set rule recorded.
+- Learning-state tracking rule created in `study/learning-state.md`.
+- Study-session handoff template created in `templates/study-session-handoff.md`.
+- Day 1 WBS learning session recorded in `study/sessions/2026-08-13.md`.
+- WBS topic state recorded in `study/topic-states/wbs.yml`.
+- WBS knowledge card created in `knowledge/software-engineering/project-management-wbs.md`.
 
 ## Pending
 
 - HWP round 116 conversion.
+- WBS active recall review on 2026-08-14.
 - First timed answer draft from an `OK` topic.
 - First reviewed answer.
 - First answer-derived weak-point entry.

@@ -1,6 +1,6 @@
 # Weak Points
 
-No answer-derived weak points have been recorded yet.
+Weak points can come from answer reviews, recall tests, outline tests, or timed writing.
 
 ## Weak-Point Tags
 
@@ -19,3 +19,7 @@ No answer-derived weak points have been recorded yet.
 
 | Date | Topic | Source Answer | Weak Point | Next Action |
 |---|---|---|---|---|
+| 2026-08-13 | WBS | Day 1 recall tests | `hierarchical_decomposition`: management purpose was recalled, but total-scope hierarchical decomposition did not appear spontaneously | Next review starts with one-sentence WBS definition |
+| 2026-08-13 | WBS | Day 1 recall tests | `wbs_principles`: could not recall a principle other than 100% Rule | Recall creation principles and WBS Dictionary |
+| 2026-08-13 | WBS | Day 1 outline test | `question_requirement_to_outline`: outline did not directly reflect "concept and creation principles" | Practice 30-second outline for WBS concept/principles question |
+| 2026-08-13 | WBS | Day 1 final recall | `technical_answer_expression`: concept was understandable but not yet exam-ready wording | Convert recall into concise technical sentence |

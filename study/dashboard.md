@@ -13,9 +13,23 @@
 | Topic cards | Do not mass-create yet; TOP 30 candidates selected |
 | Current milestone | 2026-08-22 baseline mock exam |
 | Unseen set | Round 140 reserved until 2026-08-22 |
+| Total studied topics | 1 |
 | Answer practice | Not started |
-| Weak-point tracking | Structure only |
-| Overall progress | `[###-------] 28%` |
+| Weak-point tracking | Day 1 WBS weak points recorded |
+| Overall progress | `[###-------] 29%` |
+
+## Personal Learning Snapshot
+
+| Item | Status |
+|---|---|
+| Studied topics | 1: WBS |
+| Due review | WBS due on 2026-08-14 |
+| Weak recall | WBS: hierarchical decomposition, creation principles |
+| Weak answer structure | WBS concept/principles outline |
+| Stable recall | WBS: Work Package, 100% Rule |
+| New learning candidates | Software testing and QA, Data quality and governance |
+| Latest studied | 2026-08-13 WBS |
+| Latest answer practice | None |
 
 ## Coverage Snapshot
 
@@ -45,11 +59,11 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 
 ## Today If Studying
 
-1. Pick one `OK` high-frequency topic from `study/answer-practice-priorities.md`.
-2. Write a timed draft in `answers/drafts/`.
-3. Review it with `templates/answer-review.md`.
-4. Convert the reviewed weakness into `study/weak-points.md`.
-5. For `NEW_GAP` topics, create a one-page latest-source note before answering.
+1. Review WBS with active recall, not rereading.
+2. Add one new high-frequency topic from `study/answer-practice-priorities.md`.
+3. Do one short outline or timed draft.
+4. Review it with `templates/answer-review.md`.
+5. Update topic state and weak points with dated evidence.
 
 ## System Readiness
 
@@ -59,7 +73,7 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 | Topic cards | `[----------] 2%` | Template exists; sample card exists |
 | Past-exam linking | `[##--------] 20%` | 54-topic map created; per-question links not populated |
 | Answer practice | `[----------] 0%` | Lifecycle defined |
-| Weak-point tracking | `[----------] 0%` | Waiting for reviewed answers |
+| Weak-point tracking | `[#---------] 10%` | Day 1 WBS weak points recorded |
 | Trends | `[#---------] 10%` | Latest-source research priorities listed |
 | Predictions | `[#---------] 5%` | Recent/increasing topics identified |
 
@@ -75,8 +89,9 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 
 ## Near-Term Queue
 
-- [ ] Create topic card for software testing and QA.
+- [ ] Review WBS on 2026-08-14 with active recall.
 - [ ] Create first timed answer draft from an `OK` topic.
+- [ ] Create topic card for software testing and QA.
 - [ ] Research one Priority 1 current gap: RAG, AI RMF, Zero Trust, or SBOM.
 - [ ] Review the draft and update `study/weak-points.md`.
 - [ ] Link the practiced question to `study/topic-map.md`.

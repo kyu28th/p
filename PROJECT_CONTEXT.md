@@ -88,3 +88,20 @@ study/status.yml -> study/dashboard.md
 - Avoid excessive system construction. New schema/dashboard/script/template work should be done only when it clearly improves pass probability more than direct study.
 - Daily loop: topic -> knowledge check -> concept understanding -> related past exams -> outline -> answer keywords -> table/diagram -> answer writing -> review -> weak point -> review schedule.
 - 2026-08-22 results should classify each question by knowledge level, answer-structure quality, time issue, and interpretation failure, then become the baseline for the 141st-exam plan.
+
+## Personal Learning State
+
+- Study baseline start: 2026-08-13 Day 1.
+- Do not infer high exam readiness from general IT work experience.
+- Track historical measurements separately from current estimated state.
+- Every measurement must have a date.
+- Understanding, recall, answer structure, and writing are separate abilities.
+- Current studied topic count: 1.
+- First studied topic: WBS.
+- WBS measured on 2026-08-13: understanding 3/5, recall 3/5, answer structure 1/5, writing not measured.
+- WBS strengths: Work Package, 100% Rule, management purpose.
+- WBS weak points: hierarchical decomposition recall, WBS principles recall, question requirement to outline, technical answer expression.
+- WBS next review: 2026-08-14.
+- Topic state path: `study/topic-states/wbs.yml`.
+- Session path: `study/sessions/2026-08-13.md`.
+- ChatGPT handoff template: `templates/study-session-handoff.md`.
