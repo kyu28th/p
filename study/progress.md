@@ -44,6 +44,7 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 - Software Configuration Management topic state recorded in `study/topic-states/software-configuration-management.yml`.
 - Project Risk Management review state recorded in `study/topic-states/project-risk-management.yml`.
 - AS-001 answer skill evidence recorded in `study/answer-skills.md`.
+- 2027 assumed schedule and study WBS created in `study/schedule-2027.md`.
 
 ## Pending
 
@@ -51,6 +52,7 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 - Requirements Traceability active recall review: definition first, then impact analysis and RTM.
 - Software Configuration Management pending outline: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
 - Software Configuration Management long-term recall check for 식별/통제/상태기록/감사 and CI.
+- WBS 2.0 milestone: TOP 30 topic definition/outline/keyword recall by 2026-09-30.
 - First timed answer draft from an `OK` topic.
 - First reviewed answer.
 - First answer-derived weak-point entry.

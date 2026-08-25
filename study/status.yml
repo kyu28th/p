@@ -11,6 +11,11 @@ project:
   baseline_mock_exam: "round 140 unseen set; 100 minutes x 4 periods = 400 minutes"
   unseen_set_rule: "Do not use round 140 for ordinary study, examples, recommendations, or predictions before 2026-08-22."
   overall_progress_percent: 31
+  schedule_2027:
+    status: "assumed"
+    application: "2027-01-05 ~ 2027-01-08"
+    written_exam: "2027-02-06"
+    schedule_path: "study/schedule-2027.md"
 
 repositories:
   public_safety:
@@ -169,3 +174,12 @@ next_actions:
     action: "Research one Priority 1 current gap such as RAG, AI RMF, Zero Trust, or SBOM."
   - priority: 5
     action: "Link the practiced question to study/topic-map.md."
+
+schedule_control:
+  source: "study/schedule-2027.md"
+  target_application: "2027-01-05 ~ 2027-01-08"
+  target_written_exam: "2027-02-06"
+  status: "assumed_until_official_qnet_schedule"
+  current_wbs_focus:
+    - "2.0 핵심 빈출 토픽 1차 구축"
+    - "3.0 답안 구조 훈련"

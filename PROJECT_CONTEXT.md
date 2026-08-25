@@ -112,3 +112,7 @@ study/status.yml -> study/dashboard.md
 - Software Configuration Management current state: immediate recall of 식별/통제/상태기록/감사 and CI succeeded; long-term recall, English terms, exam definition, and answer structure remain unmeasured.
 - AS-001 state: Requirements Traceability outline alignment succeeded independently twice; next validation is transfer to Software Configuration Management.
 - Next start question: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오." Ask for 큰 목차 and 주요 활동 4개 without hints.
+- 2027 assumed schedule path: `study/schedule-2027.md`.
+- 2027 assumed application: 2027-01-05 ~ 2027-01-08.
+- 2027 assumed written exam: 2027-02-06.
+- Current schedule-control WBS focus: TOP 30 topic recall by 2026-09-30, answer-structure training by 2026-10-31, latest-gap repair by 2026-11-30, timed writing volume by 2026-12-31, final mocks by 2027-01-24.

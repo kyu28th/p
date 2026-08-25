@@ -18,6 +18,28 @@
 | Weak-point tracking | WBS, Requirements Traceability, Risk Management, Configuration Management events recorded |
 | Overall progress | `[###-------] 31%` |
 
+## 2027 Assumed Schedule
+
+2027년 공식 일정이 확정되기 전까지 사용하는 계획용 일정이다.
+
+| Item | Date | Status |
+|---|---|---|
+| 원서접수 | 2027-01-05 ~ 2027-01-08 | assumed |
+| 필기시험 | 2027-02-06 | assumed |
+| Schedule file | `study/schedule-2027.md` | active |
+
+## Study WBS Milestones
+
+| WBS | Work Package | Target | Done When |
+|---|---|---|---|
+| 2.0 | 핵심 빈출 토픽 1차 구축 | 2026-09-30 | TOP 30 정의/목차/키워드 최소 1회 회상 |
+| 3.0 | 답안 구조 훈련 | 2026-10-31 | 10점형 40개, 25점형 12개 목차 작성/평가 |
+| 4.0 | 최신 Gap 보강 | 2026-11-30 | AI/보안/클라우드/데이터 최신 주제 15개 보강 |
+| 5.0 | 실전 답안 작성 | 2026-12-31 | 10점형 50개, 25점형 20개 작성/피드백 |
+| 6.0 | 모의고사/약점 보완 | 2027-01-24 | 400분 모의고사 3회와 약점 재답안 |
+| 7.0 | 접수/최종정리 | 2027-01-08 | 원서접수 완료, 최종 암기표/도식/키워드팩 확정 |
+| 9.0 | 필기시험 | 2027-02-06 | 시험 응시 |
+
 ## Personal Learning Snapshot
 
 | Item | Status |
@@ -91,6 +113,7 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 
 - [ ] Answer: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
 - [ ] Review Requirements Traceability definition with active recall.
+- [ ] Work toward WBS 2.0: TOP 30 topics definition/outline/keyword recall by 2026-09-30.
 - [ ] Create first timed answer draft from an `OK` topic.
 - [ ] Create topic card for software testing and QA.
 - [ ] Research one Priority 1 current gap: RAG, AI RMF, Zero Trust, or SBOM.

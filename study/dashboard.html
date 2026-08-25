@@ -160,6 +160,147 @@
       font-size: 14px;
     }
 
+    .schedule-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .schedule-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .panel-title h2 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .month {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fbfcfd;
+    }
+
+    .month-name {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .weekdays,
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+
+    .weekdays span {
+      padding: 7px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 11px;
+      font-weight: 760;
+    }
+
+    .day {
+      min-height: 38px;
+      padding: 5px;
+      border-top: 1px solid #edf1f4;
+      border-left: 1px solid #edf1f4;
+      color: var(--muted);
+      font-size: 11px;
+      position: relative;
+    }
+
+    .day:nth-child(7n + 1) { border-left: 0; }
+    .day.blank { background: #f5f7f9; }
+
+    .day strong {
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .day.application {
+      background: #fff8ed;
+      box-shadow: inset 0 0 0 2px #f1d3a7;
+    }
+
+    .day.exam {
+      background: #fdebed;
+      box-shadow: inset 0 0 0 2px #e9a8b0;
+    }
+
+    .day .mark {
+      display: block;
+      margin-top: 2px;
+      overflow: hidden;
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 760;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .milestones {
+      display: grid;
+      gap: 8px;
+    }
+
+    .milestone {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .milestone:first-child { border-top: 0; }
+
+    .milestone .date {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 780;
+    }
+
+    .milestone strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .milestone span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .accordion {
       display: grid;
       gap: 10px;
@@ -365,6 +506,7 @@
 
       .toolbar { justify-content: flex-start; }
       .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .schedule-layout { grid-template-columns: 1fr; }
       .cards { grid-template-columns: 1fr; }
       .topic-card { grid-template-columns: 1fr; }
       .scorebox {
@@ -377,6 +519,7 @@
     @media (max-width: 520px) {
       .wrap { width: min(100% - 20px, 1180px); }
       .summary-grid { grid-template-columns: 1fr; }
+      .calendar-grid { grid-template-columns: 1fr; }
       .alert { flex-direction: column; }
       summary { align-items: flex-start; flex-direction: column; }
       .section-stats { width: 100%; justify-content: space-between; }
@@ -388,7 +531,7 @@
     <div class="wrap topbar">
       <div>
         <h1>학습 대시보드</h1>
-        <div class="subtle">2026-08-25 기준 · Day 3/4 모바일 학습 반영</div>
+        <div class="subtle">2026-08-25 기준 · 2027 가정 일정/WBS 반영</div>
       </div>
       <nav class="toolbar" aria-label="dashboard controls">
         <button type="button" id="expandAll">전체 펼침</button>
@@ -410,9 +553,9 @@
         <div class="note">시스템+학습 기준 통합 진행</div>
       </article>
       <article class="metric">
-        <div class="label">Mock Exam</div>
+        <div class="label">Target Exam</div>
         <div class="value" id="dday">D-?</div>
-        <div class="note">2026-08-22 · 400분 baseline</div>
+        <div class="note">2027-02-06 · assumed</div>
       </article>
       <article class="metric">
         <div class="label">Studied</div>
@@ -424,6 +567,28 @@
         <div class="label">Answer Practice</div>
         <div class="value">0</div>
         <div class="note">작성 능력은 아직 미측정</div>
+      </article>
+    </section>
+
+    <section class="alert">
+      <strong>2027 일정은 가정값</strong>
+      <span>공식 일정 발표 전까지 원서접수 2027-01-05~01-08, 필기 2027-02-06을 목표로 역산한다.</span>
+    </section>
+
+    <section class="schedule-layout" aria-label="2027 schedule">
+      <article class="schedule-panel">
+        <div class="panel-title">
+          <h2>2027 Calendar</h2>
+          <span>접수/시험 가정 일정</span>
+        </div>
+        <div class="calendar-grid" id="calendar"></div>
+      </article>
+      <article class="schedule-panel">
+        <div class="panel-title">
+          <h2>Study WBS</h2>
+          <span>언제까지 무엇을 끝낼지</span>
+        </div>
+        <div class="milestones" id="milestones"></div>
       </article>
     </section>
 
@@ -537,6 +702,25 @@
       NEW_GAP: "gap",
       UPDATE_NEEDED: "update",
       REVIEW_NEEDED: "review"
+    };
+
+    const schedule = {
+      applicationStart: "2027-01-05",
+      applicationEnd: "2027-01-08",
+      exam: "2027-02-06",
+      months: [
+        { year: 2027, month: 0, label: "2027.01" },
+        { year: 2027, month: 1, label: "2027.02" }
+      ],
+      milestones: [
+        { date: "09-30", title: "WBS 2.0 핵심 빈출 토픽", detail: "TOP 30 정의/목차/키워드 최소 1회 회상" },
+        { date: "10-31", title: "WBS 3.0 답안 구조", detail: "10점형 40개, 25점형 12개 목차 작성/평가" },
+        { date: "11-30", title: "WBS 4.0 최신 Gap", detail: "AI/보안/클라우드/데이터 최신 주제 15개 보강" },
+        { date: "12-31", title: "WBS 5.0 실전 작성", detail: "10점형 50개, 25점형 20개 작성/피드백" },
+        { date: "01-08", title: "WBS 7.0 접수 완료", detail: "원서접수와 최종 암기표/도식/키워드팩 확정" },
+        { date: "01-24", title: "WBS 6.0 모의고사 종료", detail: "400분 모의고사 3회와 약점 재답안 완료" },
+        { date: "02-06", title: "WBS 9.0 필기시험", detail: "가정 목표 시험일" }
+      ]
     };
 
     const statusBase = {
@@ -687,14 +871,58 @@
     }
 
     function setDday() {
-      const target = new Date("2026-08-22T00:00:00+09:00");
+      const target = new Date(`${schedule.exam}T00:00:00+09:00`);
       const now = new Date();
       const diffDays = Math.ceil((target - now) / 86400000);
       const text = diffDays >= 0 ? `D-${diffDays}` : `D+${Math.abs(diffDays)}`;
       document.querySelector("#dday").textContent = text;
     }
 
+    function toDateKey(year, month, day) {
+      return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    }
+
+    function renderCalendar() {
+      const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+      const root = document.querySelector("#calendar");
+      root.innerHTML = schedule.months.map(({ year, month, label }) => {
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+        const blanks = Array.from({ length: firstDay }, () => `<div class="day blank"></div>`);
+        const days = Array.from({ length: lastDate }, (_, index) => {
+          const day = index + 1;
+          const key = toDateKey(year, month, day);
+          const inApplication = key >= schedule.applicationStart && key <= schedule.applicationEnd;
+          const isExam = key === schedule.exam;
+          const cls = isExam ? "exam" : inApplication ? "application" : "";
+          const mark = isExam ? "필기시험" : inApplication ? "접수" : "";
+          return `<div class="day ${cls}"><strong>${day}</strong>${mark ? `<span class="mark">${mark}</span>` : ""}</div>`;
+        });
+        return `
+          <div class="month">
+            <div class="month-name">${label}</div>
+            <div class="weekdays">${weekdays.map(day => `<span>${day}</span>`).join("")}</div>
+            <div class="days">${blanks.concat(days).join("")}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderMilestones() {
+      document.querySelector("#milestones").innerHTML = schedule.milestones.map(item => `
+        <div class="milestone">
+          <div class="date">${item.date}</div>
+          <div>
+            <strong>${item.title}</strong>
+            <span>${item.detail}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
     render();
+    renderCalendar();
+    renderMilestones();
     setDday();
 
     document.querySelector("#expandAll").addEventListener("click", () => {
