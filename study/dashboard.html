@@ -388,7 +388,7 @@
     <div class="wrap topbar">
       <div>
         <h1>학습 대시보드</h1>
-        <div class="subtle">2026-08-13 기준 · 140회는 2026-08-22까지 unseen set</div>
+        <div class="subtle">2026-08-25 기준 · Day 3/4 모바일 학습 반영</div>
       </div>
       <nav class="toolbar" aria-label="dashboard controls">
         <button type="button" id="expandAll">전체 펼침</button>
@@ -405,8 +405,8 @@
     <section class="summary-grid" aria-label="summary">
       <article class="metric">
         <div class="label">Overall</div>
-        <div class="value">29%</div>
-        <div class="progress"><span style="width:29%"></span></div>
+        <div class="value">31%</div>
+        <div class="progress"><span style="width:31%"></span></div>
         <div class="note">시스템+학습 기준 통합 진행</div>
       </article>
       <article class="metric">
@@ -416,9 +416,9 @@
       </article>
       <article class="metric">
         <div class="label">Studied</div>
-        <div class="value">1 / 54</div>
-        <div class="progress"><span style="width:2%"></span></div>
-        <div class="note">현재 실제 측정 토픽: WBS</div>
+        <div class="value">4 / 54</div>
+        <div class="progress"><span style="width:7%"></span></div>
+        <div class="note">WBS, 위험관리, 요구사항 추적성, 형상관리</div>
       </article>
       <article class="metric">
         <div class="label">Answer Practice</div>
@@ -428,8 +428,8 @@
     </section>
 
     <section class="alert">
-      <strong>Round 140 unseen</strong>
-      <span>2026-08-22 baseline 전까지 일반 학습, 예시, 추천, 예상문제에 140회 내용을 쓰지 않는다.</span>
+      <strong>Next start</strong>
+      <span>소프트웨어 형상관리의 개념과 주요 활동을 무힌트 목차로 먼저 작성한다.</span>
     </section>
 
     <section class="accordion" id="accordion"></section>
@@ -446,11 +446,26 @@
         exam: "102, 128, 129, 139",
         nextReview: "2026-08-14",
         measured: true,
-        flags: ["due", "weak"],
+        flags: ["weak"],
         dims: { understanding: 3, recall: 3, structure: 1, writing: null },
         strengths: ["Work Package", "100% Rule"],
-        weak: ["hierarchical_decomposition", "wbs_principles", "question_requirement_to_outline"],
-        note: "Day 1 측정 완료. 복습은 reread가 아니라 active recall부터."
+        weak: ["hierarchical_decomposition_exam_wording", "wbs_principles", "question_requirement_to_outline"],
+        note: "Day 3에서 계층적 분해 핵심은 회상. 시험용 표현 보강 필요."
+      },
+      {
+        id: "T-037-R",
+        name: "Project Risk Management",
+        group: "Due Review",
+        domain: "Management / Project Control",
+        status: "OK",
+        exam: "102, 128, 129, 139",
+        nextReview: "2026-08-24",
+        measured: true,
+        flags: ["due"],
+        dims: { understanding: 3, recall: 4, structure: null, writing: null },
+        strengths: ["회피/전가/완화/수용", "의미 매핑"],
+        weak: ["answer_structure"],
+        note: "부정적 위험 대응전략은 무힌트 Recall 성공. 답안 구조는 미측정."
       },
       { id: "T-033", name: "Software testing and QA", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "092, 095, 096, 098, 101, 105, 108, 114, 117, 120, 122, 126, 127, 129, 131, 133, 134, 135, 136, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "최고 빈도. 첫 답안 연습 후보." },
       { id: "T-014", name: "Data quality and governance", group: "OK Topics", domain: "Data", status: "OK", exam: "123, 126, 128, 131, 132, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "AI 학습데이터 품질과 연결." },
@@ -462,11 +477,11 @@
       { id: "T-030", name: "Network fundamentals", group: "OK Topics", domain: "Network", status: "OK", exam: "092, 099, 102, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "서브넷, 오류제어, 해시 기초." },
       { id: "T-031", name: "OS fundamentals", group: "OK Topics", domain: "OS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "가상메모리, 교착상태, inode." },
       { id: "T-032", name: "Data structures and algorithms", group: "OK Topics", domain: "CS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "B-tree, stack, sort, linked list." },
-      { id: "T-035", name: "Requirements engineering", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "102, 107, 114, 123, 124, 130, 133, 135, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "요구사항 품질저하와 연결." },
+      { id: "T-035", name: "Requirements Traceability", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 107, 114, 123, 124, 130, 133, 135, 139", nextReview: "2026-08-26", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: 4, writing: null }, strengths: ["변경관리", "누락관리", "RTM", "AS-001"], weak: ["definition_connection_tracing", "rtm_full_name"], note: "영향도는 개선. 정의의 연결/추적 키워드는 다음 복습 첫 질문." },
       { id: "T-036", name: "Agile, Scrum, Kanban, DevOps", group: "OK Topics", domain: "Software Process", status: "OK", exam: "098, 099, 101, 105, 111, 113, 119, 129, 131", measured: false, flags: ["unmeasured"], dims: {}, note: "DevSecOps와 연결." },
       { id: "T-038", name: "PMO and audit", group: "OK Topics", domain: "Management", status: "OK", exam: "098, 102, 105, 111, 117, 118, 121, 129, 136, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "감리/PMO 비교형 빈출." },
       { id: "T-040", name: "Re-engineering and 3R", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "095, 114, 119, 133, 137, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "정의+비교+절차." },
-      { id: "T-041", name: "SW maintenance and deployment", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "102, 134", measured: false, flags: ["unmeasured"], dims: {}, note: "배포전략/테스트전략 연결." },
+      { id: "T-041", name: "Software Configuration Management", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 134", nextReview: "2026-08-26", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: null, writing: null }, strengths: ["식별/통제/상태기록/감사", "CI=형상항목"], weak: ["long_term_recall", "official_english_terms", "answer_structure"], note: "즉시 Recall과 사례 구분 성공. 다음 시작 문제로 답안 구조 검증." },
       { id: "T-042", name: "Function point and estimation", group: "OK Topics", domain: "Management / Software", status: "OK", exam: "102, 104, 128", measured: false, flags: ["unmeasured"], dims: {}, note: "계산형/비교형." },
       { id: "T-043", name: "UML and modeling", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "101, 114", measured: false, flags: ["unmeasured"], dims: {}, note: "stereotype, modeling." },
       { id: "T-044", name: "Security fundamentals", group: "OK Topics", domain: "Security", status: "OK", exam: "092, 101, 102, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "암호, 해시, TLS, 접근통제." },

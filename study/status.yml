@@ -10,7 +10,7 @@ project:
   current_milestone: "2026-08-22 baseline mock exam"
   baseline_mock_exam: "round 140 unseen set; 100 minutes x 4 periods = 400 minutes"
   unseen_set_rule: "Do not use round 140 for ordinary study, examples, recommendations, or predictions before 2026-08-22."
-  overall_progress_percent: 29
+  overall_progress_percent: 31
 
 repositories:
   public_safety:
@@ -33,8 +33,8 @@ areas:
     percent: 0
     status: "lifecycle defined; no real answer yet"
   weak_point_tracking:
-    percent: 10
-    status: "Day 1 WBS weak points recorded from recall and outline tests"
+    percent: 20
+    status: "Day 1 WBS and Day 3/4 mobile recall, correction, and pending outline events recorded"
   trends:
     percent: 10
     status: "latest-source research priorities listed"
@@ -58,14 +58,14 @@ operating_rules:
 
 personal_learning:
   day_zero_baseline: "2026-08-13"
-  studied_topics_count: 1
-  latest_session: "study/sessions/2026-08-13.md"
+  studied_topics_count: 4
+  latest_session: "study/sessions/2026-08-25.md"
   topic_states:
     - topic: "WBS"
       path: "study/topic-states/wbs.yml"
       first_studied: "2026-08-13"
-      last_tested: "2026-08-13"
-      next_review: "2026-08-14"
+      last_tested: "2026-08-21"
+      next_review: "2026-08-24"
       measured:
         understanding: 3
         recall: 3
@@ -86,14 +86,85 @@ personal_learning:
         - "wbs_principles"
         - "question_requirement_to_outline"
         - "technical_answer_expression"
+    - topic: "Project Risk Management"
+      path: "study/topic-states/project-risk-management.yml"
+      first_studied: "2026-08-21"
+      last_tested: "2026-08-21"
+      next_review: "2026-08-24"
+      measured:
+        understanding: 3
+        recall: 4
+        answer_structure: null
+        writing: null
+      current_estimated:
+        as_of: "2026-08-21"
+        understanding: 3
+        recall: 4
+        answer_structure: null
+        writing: null
+      strengths:
+        - "negative_risk_response_strategies"
+        - "meaning_mapping"
+      weak_points:
+        - "answer_structure"
+    - topic: "Requirements Traceability"
+      path: "study/topic-states/requirements-traceability.yml"
+      first_studied: "2026-08-21"
+      last_tested: "2026-08-25"
+      next_review: "2026-08-26"
+      measured:
+        understanding: 3
+        recall: 3
+        answer_structure: 4
+        writing: null
+      current_estimated:
+        as_of: "2026-08-25"
+        understanding: 3
+        recall: 3
+        answer_structure: 4
+        writing: null
+      strengths:
+        - "change_management"
+        - "omission_management"
+        - "rtm"
+        - "as001_outline_alignment"
+      weak_points:
+        - "definition_connection_tracing"
+        - "impact_analysis_improving"
+        - "rtm_full_name"
+    - topic: "Software Configuration Management"
+      path: "study/topic-states/software-configuration-management.yml"
+      first_studied: "2026-08-25"
+      last_tested: "2026-08-25"
+      next_review: "2026-08-26"
+      measured:
+        understanding: 3
+        recall: 3
+        answer_structure: null
+        writing: null
+      current_estimated:
+        as_of: "2026-08-25"
+        understanding: 3
+        recall: 3
+        answer_structure: null
+        writing: null
+      strengths:
+        - "four_activities"
+        - "case_classification"
+        - "configuration_item"
+      weak_points:
+        - "long_term_recall"
+        - "official_english_terms"
+        - "exam_definition"
+        - "answer_structure"
 
 next_actions:
   - priority: 1
-    action: "Review WBS on 2026-08-14 with active recall."
+    action: "Start with the pending Software Configuration Management outline: concept and four activities."
   - priority: 2
-    action: "Create the first answer draft from an OK high-frequency topic."
+    action: "Review Requirements Traceability definition with active recall: requirements-design-dev-test connection/tracing."
   - priority: 3
-    action: "Create topic card for software testing and QA."
+    action: "Create the first answer draft from an OK high-frequency topic."
   - priority: 4
     action: "Research one Priority 1 current gap such as RAG, AI RMF, Zero Trust, or SBOM."
   - priority: 5

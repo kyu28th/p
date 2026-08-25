@@ -1,0 +1,137 @@
+topic_id: T-041
+topic: Software Configuration Management
+canonical_name: SW maintenance and deployment
+domain: software-engineering/configuration-management
+coverage_status: OK
+
+dates:
+  first_studied: "2026-08-25"
+  last_studied: "2026-08-25"
+  last_tested: "2026-08-25"
+  last_reviewed: ""
+  next_review: "2026-08-26"
+  review_count: 0
+
+historical_measurements:
+  - date: "2026-08-25"
+    source: "Day 4 mobile study session"
+    understanding: 3
+    recall: 3
+    answer_structure: null
+    writing: null
+    notes:
+      - "Initial knowledge connected configuration management to version management."
+      - "Four activities and CI were recalled immediately."
+      - "Answer structure and writing are null because the pending exam-style question was not answered."
+
+current_estimated_state:
+  as_of: "2026-08-25"
+  days_since_last_test: 0
+  reviews_since_last_test: 0
+  understanding: 3
+  recall: 3
+  answer_structure: null
+  writing: null
+  review_status: due_soon
+  reason: "Immediate recall succeeded, but long-term recall and exam outline are not measured."
+
+strengths:
+  - concept: version_management_relation
+    evidence: "Initial answer identified version management as related."
+  - concept: four_activities
+    evidence: "Recalled 식별, 통제, 상태기록, 감사 immediately."
+  - concept: case_classification
+    evidence: "Correctly mapped control, status accounting, audit, and identification examples."
+  - concept: configuration_item
+    evidence: "Recalled CI as 형상항목."
+
+weak_points:
+  - concept: long_term_recall
+    type: review_needed
+    evidence: "Only immediate recall has been measured."
+  - concept: official_english_terms
+    type: keyword
+    evidence: "Korean keywords were recalled; English official terms are not yet measured."
+  - concept: exam_definition
+    type: weak-definition
+    evidence: "Exact exam-ready definition has not yet been recalled."
+  - concept: answer_structure
+    type: weak-structure
+    evidence: "Pending exam-style outline has not yet been answered."
+
+events:
+  - date: "2026-08-25"
+    type: initial_knowledge_check
+    question: "소프트웨어 형상관리가 뭐라고 생각해?"
+    user_answer: "버전관리"
+    result: partial_success
+    concept: version_management_relation
+    interpretation: "Version management is part of configuration management, but configuration management is broader."
+  - date: "2026-08-25"
+    type: learning
+    content:
+      - "형상관리 주요 활동: 식별 -> 통제 -> 상태기록 -> 감사"
+      - "CI = Configuration Item = 형상항목"
+      - "형상식별 단계에서 CI를 선정"
+  - date: "2026-08-25"
+    type: recall_test
+    question: "형상관리의 4가지 주요 활동?"
+    user_answer: "식별 통제 상태기록 감사"
+    result: success
+    concept: four_activities
+  - date: "2026-08-25"
+    type: recall_test
+    question: "변경 요청이 들어왔는데 승인해서 반영해도 되는지 검토"
+    user_answer: "통제"
+    result: success
+    concept: configuration_control
+  - date: "2026-08-25"
+    type: recall_test
+    question: "현재 운영 프로그램이 v2.3이고 어떤 변경사항까지 반영됐는지 기록"
+    user_answer: "상태기록"
+    result: success
+    concept: status_accounting
+  - date: "2026-08-25"
+    type: recall_test
+    question: "릴리스 전에 승인된 변경사항이 실제 소스와 문서에 정확하게 반영됐는지 검사"
+    user_answer: "감사"
+    result: success
+    concept: configuration_audit
+  - date: "2026-08-25"
+    type: recall_test
+    question: "소스코드, 설계서, 테스트 문서 중 무엇을 형상관리 대상으로 관리할지 결정"
+    user_answer: "식별"
+    result: success
+    concept: configuration_identification
+  - date: "2026-08-25"
+    type: recall_test
+    question: "CI가 뭐였지? 한국어 의미만."
+    user_answer: "형상항목"
+    result: success
+    concept: configuration_item
+  - date: "2026-08-25"
+    type: pending_outline_test
+    question: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
+    user_answer: ""
+    result: pending
+    concept: answer_structure
+
+review_plan:
+  base_intervals_days: [1, 3, 7, 14, 30]
+  next_active_recall_questions:
+    - "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오. 큰 목차와 주요 활동 4개만 써라."
+    - "형상관리 주요 활동 4가지는?"
+    - "CI란?"
+    - "식별과 통제의 차이는?"
+    - "상태기록과 감사의 차이는?"
+  must_check_keywords_next_time:
+    - "식별"
+    - "통제"
+    - "상태기록"
+    - "감사"
+    - "CI"
+    - "형상항목"
+    - "Configuration Identification"
+    - "Configuration Control"
+    - "Configuration Status Accounting"
+    - "Configuration Audit"

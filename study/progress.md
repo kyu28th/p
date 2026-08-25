@@ -38,11 +38,19 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 - Day 1 WBS learning session recorded in `study/sessions/2026-08-13.md`.
 - WBS topic state recorded in `study/topic-states/wbs.yml`.
 - WBS knowledge card created in `knowledge/software-engineering/project-management-wbs.md`.
+- Day 3 mobile study data recorded in `study/sessions/2026-08-21.md`.
+- Day 4 mobile study data recorded in `study/sessions/2026-08-25.md`.
+- Requirements Traceability topic state recorded in `study/topic-states/requirements-traceability.yml`.
+- Software Configuration Management topic state recorded in `study/topic-states/software-configuration-management.yml`.
+- Project Risk Management review state recorded in `study/topic-states/project-risk-management.yml`.
+- AS-001 answer skill evidence recorded in `study/answer-skills.md`.
 
 ## Pending
 
 - HWP round 116 conversion.
-- WBS active recall review on 2026-08-14.
+- Requirements Traceability active recall review: definition first, then impact analysis and RTM.
+- Software Configuration Management pending outline: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
+- Software Configuration Management long-term recall check for 식별/통제/상태기록/감사 and CI.
 - First timed answer draft from an `OK` topic.
 - First reviewed answer.
 - First answer-derived weak-point entry.

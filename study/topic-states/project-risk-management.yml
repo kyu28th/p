@@ -1,0 +1,66 @@
+topic_id: T-037
+topic: Project Risk Management
+canonical_name: Project planning and control
+domain: management/project-control
+coverage_status: OK
+
+dates:
+  first_studied: "2026-08-21"
+  last_studied: "2026-08-21"
+  last_tested: "2026-08-21"
+  last_reviewed: "2026-08-21"
+  next_review: "2026-08-24"
+  review_count: 1
+
+historical_measurements:
+  - date: "2026-08-21"
+    source: "Day 3 mobile review"
+    understanding: 3
+    recall: 4
+    answer_structure: null
+    writing: null
+    notes:
+      - "Negative risk response strategies were recalled without hints."
+      - "Meaning mapping was recalled."
+      - "Answer structure and writing are not measured."
+
+current_estimated_state:
+  as_of: "2026-08-21"
+  understanding: 3
+  recall: 4
+  answer_structure: null
+  writing: null
+  review_status: review_due
+  reason: "Recall was strong on Day 3, but no later review has been recorded."
+
+strengths:
+  - concept: negative_risk_response_strategies
+    evidence: "Recalled 회피, 전가, 완화, 수용."
+  - concept: meaning_mapping
+    evidence: "Mapped to 제거, 이전, 낮춤/감소, 받아들임."
+
+weak_points:
+  - concept: answer_structure
+    type: weak-structure
+    evidence: "No exam-style outline or written answer measured."
+
+events:
+  - date: "2026-08-21"
+    type: recall_test
+    question: "부정적 위험 대응전략 4가지는?"
+    user_answer: "회피 전가 완화 수용"
+    result: success
+    concept: negative_risk_response_strategies
+  - date: "2026-08-21"
+    type: recall_test
+    question: "각 전략의 의미는?"
+    user_answer: "제거 이전 낮춤 받아들임"
+    result: success
+    concept: meaning_mapping
+
+review_plan:
+  base_intervals_days: [1, 3, 7, 14, 30]
+  next_active_recall_questions:
+    - "부정적 위험 대응전략 4가지는?"
+    - "회피/전가/완화/수용의 차이를 한 줄씩 설명하라."
+    - "위험관리 절차 목차를 잡아라."

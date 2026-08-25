@@ -12,23 +12,23 @@
 | Topic map | 54 canonical topics identified |
 | Topic cards | Do not mass-create yet; TOP 30 candidates selected |
 | Current milestone | 2026-08-22 baseline mock exam |
-| Unseen set | Round 140 reserved until 2026-08-22 |
-| Total studied topics | 1 |
+| Unseen set | Round 140 was reserved until 2026-08-22 |
+| Total studied topics | 4 |
 | Answer practice | Not started |
-| Weak-point tracking | Day 1 WBS weak points recorded |
-| Overall progress | `[###-------] 29%` |
+| Weak-point tracking | WBS, Requirements Traceability, Risk Management, Configuration Management events recorded |
+| Overall progress | `[###-------] 31%` |
 
 ## Personal Learning Snapshot
 
 | Item | Status |
 |---|---|
-| Studied topics | 1: WBS |
-| Due review | WBS due on 2026-08-14 |
-| Weak recall | WBS: hierarchical decomposition, creation principles |
-| Weak answer structure | WBS concept/principles outline |
-| Stable recall | WBS: Work Package, 100% Rule |
+| Studied topics | 4: WBS, Project Risk Management, Requirements Traceability, Software Configuration Management |
+| Due review | Requirements Traceability and Configuration Management due on 2026-08-26 |
+| Weak recall | Requirements Traceability: definition connection/tracing; Configuration Management: long-term recall not measured |
+| Weak answer structure | WBS concept/principles outline; Configuration Management concept/activities outline pending |
+| Stable recall | WBS: Work Package, 100% Rule; Risk: 회피/전가/완화/수용; Configuration Management immediate 4-activity recall |
 | New learning candidates | Software testing and QA, Data quality and governance |
-| Latest studied | 2026-08-13 WBS |
+| Latest studied | 2026-08-25 Software Configuration Management |
 | Latest answer practice | None |
 
 ## Coverage Snapshot
@@ -59,8 +59,8 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 
 ## Today If Studying
 
-1. Review WBS with active recall, not rereading.
-2. Add one new high-frequency topic from `study/answer-practice-priorities.md`.
+1. Start with the pending Configuration Management outline, not rereading.
+2. Recheck Requirements Traceability definition: requirements-design-dev-test connection/tracing.
 3. Do one short outline or timed draft.
 4. Review it with `templates/answer-review.md`.
 5. Update topic state and weak points with dated evidence.
@@ -73,7 +73,7 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 | Topic cards | `[----------] 2%` | Template exists; sample card exists |
 | Past-exam linking | `[##--------] 20%` | 54-topic map created; per-question links not populated |
 | Answer practice | `[----------] 0%` | Lifecycle defined |
-| Weak-point tracking | `[#---------] 10%` | Day 1 WBS weak points recorded |
+| Weak-point tracking | `[##--------] 20%` | Day 3/4 recall and correction events recorded |
 | Trends | `[#---------] 10%` | Latest-source research priorities listed |
 | Predictions | `[#---------] 5%` | Recent/increasing topics identified |
 
@@ -89,7 +89,8 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 
 ## Near-Term Queue
 
-- [ ] Review WBS on 2026-08-14 with active recall.
+- [ ] Answer: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
+- [ ] Review Requirements Traceability definition with active recall.
 - [ ] Create first timed answer draft from an `OK` topic.
 - [ ] Create topic card for software testing and QA.
 - [ ] Research one Priority 1 current gap: RAG, AI RMF, Zero Trust, or SBOM.

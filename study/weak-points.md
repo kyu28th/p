@@ -23,3 +23,9 @@ Weak points can come from answer reviews, recall tests, outline tests, or timed 
 | 2026-08-13 | WBS | Day 1 recall tests | `wbs_principles`: could not recall a principle other than 100% Rule | Recall creation principles and WBS Dictionary |
 | 2026-08-13 | WBS | Day 1 outline test | `question_requirement_to_outline`: outline did not directly reflect "concept and creation principles" | Practice 30-second outline for WBS concept/principles question |
 | 2026-08-13 | WBS | Day 1 final recall | `technical_answer_expression`: concept was understandable but not yet exam-ready wording | Convert recall into concise technical sentence |
+| 2026-08-21 | WBS | Day 3 review | `hierarchical_decomposition_exam_wording`: recalled "작은 단위로 분류", but needs exam wording | Start next WBS review with "상위 작업을 하위 작업으로 단계적으로 세분화" |
+| 2026-08-21 | Requirements Traceability | Day 3 recall | `impact_analysis`: first answered "과제" before correction to "영향도" | Recheck impact analysis without hint |
+| 2026-08-21 | Requirements Traceability | Day 3 recall | `rtm_full_name`: first answered "RTX" before correction to RTM | Recall "Requirements Traceability Matrix" |
+| 2026-08-25 | Requirements Traceability | Day 4 recall | `definition_connection_tracing`: answered "관리" before correction to "추적" | Next review starts with definition: requirements-design-dev-test connection/tracing |
+| 2026-08-25 | Software Configuration Management | Day 4 new learning | `long_term_recall`: only immediate recall was measured | Recheck four activities after time delay |
+| 2026-08-25 | Software Configuration Management | Day 4 pending outline | `answer_structure`: exam-style outline not yet answered | Start next session with concept and four activities outline |

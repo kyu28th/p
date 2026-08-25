@@ -6,11 +6,11 @@ coverage_status: OK
 
 dates:
   first_studied: "2026-08-13"
-  last_studied: "2026-08-13"
-  last_tested: "2026-08-13"
-  last_reviewed: ""
-  next_review: "2026-08-14"
-  review_count: 0
+  last_studied: "2026-08-21"
+  last_tested: "2026-08-21"
+  last_reviewed: "2026-08-21"
+  next_review: "2026-08-24"
+  review_count: 1
 
 historical_measurements:
   - date: "2026-08-13"
@@ -24,15 +24,15 @@ historical_measurements:
       - "Writing is null because no timed full answer was written."
 
 current_estimated_state:
-  as_of: "2026-08-13"
+  as_of: "2026-08-21"
   days_since_last_test: 0
-  reviews_since_last_test: 0
+  reviews_since_last_test: 1
   understanding: 3
   recall: 3
   answer_structure: 1
   writing: null
   review_status: due_soon
-  reason: "Measured today; no forgetting adjustment applied yet. Next review is scheduled for the 1-day interval."
+  reason: "Day 3 review improved hierarchical decomposition recall, but exam-ready expression still needs reinforcement."
 
 strengths:
   - concept: work_package
@@ -55,6 +55,9 @@ weak_points:
   - concept: technical_answer_expression
     type: writing_readiness
     evidence: "Concept recall was understandable but not yet expressed in exam-ready technical language."
+  - concept: hierarchical_decomposition_exam_wording
+    type: weak-definition
+    evidence: "On 2026-08-21, recalled '작은 단위로 분류'; needs exam wording: 상위 작업을 하위 작업으로 단계적으로 세분화."
 
 events:
   - date: "2026-08-13"
@@ -109,6 +112,13 @@ events:
       - "project total scope"
       - "hierarchical decomposition"
       - "100% Rule"
+  - date: "2026-08-21"
+    type: review
+    question: "WBS에서 계층적 분해가 무슨 뜻이지?"
+    user_answer: "작은 단위로 분류"
+    result: partial_success
+    concept: hierarchical_decomposition
+    interpretation: "Core idea was recalled, but answer still needs exam-ready wording: 상위 작업을 하위 작업으로 단계적으로 세분화."
 
 review_plan:
   base_intervals_days: [1, 3, 7, 14, 30]

@@ -96,7 +96,8 @@ study/status.yml -> study/dashboard.md
 - Track historical measurements separately from current estimated state.
 - Every measurement must have a date.
 - Understanding, recall, answer structure, and writing are separate abilities.
-- Current studied topic count: 1.
+- Current studied topic count: 4.
+- Studied topics: WBS, Project Risk Management, Requirements Traceability, Software Configuration Management.
 - First studied topic: WBS.
 - WBS measured on 2026-08-13: understanding 3/5, recall 3/5, answer structure 1/5, writing not measured.
 - WBS strengths: Work Package, 100% Rule, management purpose.
@@ -105,3 +106,9 @@ study/status.yml -> study/dashboard.md
 - Topic state path: `study/topic-states/wbs.yml`.
 - Session path: `study/sessions/2026-08-13.md`.
 - ChatGPT handoff template: `templates/study-session-handoff.md`.
+- Day 3 mobile data recorded: `study/sessions/2026-08-21.md`.
+- Day 4 mobile data recorded: `study/sessions/2026-08-25.md`.
+- Requirements Traceability current weak point: definition connection/tracing is not yet stable without correction; impact analysis improved on 2026-08-25.
+- Software Configuration Management current state: immediate recall of 식별/통제/상태기록/감사 and CI succeeded; long-term recall, English terms, exam definition, and answer structure remain unmeasured.
+- AS-001 state: Requirements Traceability outline alignment succeeded independently twice; next validation is transfer to Software Configuration Management.
+- Next start question: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오." Ask for 큰 목차 and 주요 활동 4개 without hints.
