@@ -6,11 +6,11 @@ coverage_status: OK
 
 dates:
   first_studied: "2026-08-21"
-  last_studied: "2026-08-25"
-  last_tested: "2026-08-25"
-  last_reviewed: "2026-08-25"
-  next_review: "2026-08-26"
-  review_count: 1
+  last_studied: "2026-08-26"
+  last_tested: "2026-08-26"
+  last_reviewed: "2026-08-26"
+  next_review: "2026-08-27"
+  review_count: 2
 
 historical_measurements:
   - date: "2026-08-21"
@@ -33,17 +33,28 @@ historical_measurements:
       - "Change, omission, RTM, and impact analysis were recalled."
       - "Definition keyword connection/tracing was not recalled spontaneously until correction."
       - "Writing is null because no timed full answer was written."
+  - date: "2026-08-26"
+    source: "Day 5 active recall review"
+    understanding: 3
+    recall: 3
+    answer_structure: null
+    writing: null
+    notes:
+      - "Omission management, change management, impact analysis, and RTM were recalled."
+      - "Definition-centered connection/tracing between requirements, design, development, and testing was missing again."
+      - "No correction retest was performed, so connection/tracing is not marked as success."
+      - "Writing is null because no timed full answer was written."
 
 current_estimated_state:
-  as_of: "2026-08-25"
+  as_of: "2026-08-26"
   days_since_last_test: 0
-  reviews_since_last_test: 1
+  reviews_since_last_test: 2
   understanding: 3
   recall: 3
   answer_structure: 4
   writing: null
   review_status: due_soon
-  reason: "Day 4 review showed improved impact-analysis recall, but definition still needs active recall."
+  reason: "Impact analysis and RTM are stable, but the definition's connection/tracing core was missed again on 2026-08-26."
 
 strengths:
   - concept: change_management
@@ -52,13 +63,15 @@ strengths:
     evidence: "Recalled omission management on Day 3 and Day 4."
   - concept: rtm
     evidence: "Recalled RTM on Day 3 final recall and Day 4 initial recall."
+  - concept: impact_analysis
+    evidence: "Recalled impact analysis on 2026-08-25 and 2026-08-26."
   - concept: as001_outline_alignment
     evidence: "Built outlines matching requested question elements on 2026-08-21 and 2026-08-25."
 
 weak_points:
   - concept: definition_connection_tracing
     type: recall
-    evidence: "On 2026-08-25, answered '관리' before correcting to '추적'."
+    evidence: "On 2026-08-25, answered '관리' before correcting to '추적'; on 2026-08-26, again omitted requirements-design-development-test connection/tracing."
   - concept: impact_analysis
     type: recall_improving
     evidence: "Failed initially on 2026-08-21, then recalled without hint on 2026-08-25."
@@ -141,11 +154,19 @@ events:
     user_answer: "개념 필요성 기대효과"
     result: success
     concept: AS-001
+  - date: "2026-08-26"
+    type: recall_test
+    question: "요구사항 추적성이란 무엇인가?"
+    user_answer: "누락, 변경관리를 위해 영향도와 필요작업을 파악하는 것. RTM을 활용한다."
+    result: partial_success
+    concept: definition
+    interpretation: "Recalled omission, change, impact analysis, and RTM, but omitted connection/tracing between requirements, design, development, and testing. No retest after correction."
 
 review_plan:
   base_intervals_days: [1, 3, 7, 14, 30]
   next_active_recall_questions:
     - "요구사항 추적성이란?"
+    - "요구사항과 설계·개발·테스트 산출물 간 무엇을 관리하는가?"
     - "요구사항 변경 시 RTM으로 무엇을 파악하는가?"
     - "RTM의 Full Name과 한국어 의미는?"
     - "요구사항 추적성의 필요성 4가지는?"

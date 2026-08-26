@@ -6,11 +6,11 @@ coverage_status: OK
 
 dates:
   first_studied: "2026-08-25"
-  last_studied: "2026-08-25"
-  last_tested: "2026-08-25"
-  last_reviewed: ""
-  next_review: "2026-08-26"
-  review_count: 0
+  last_studied: "2026-08-26"
+  last_tested: "2026-08-26"
+  last_reviewed: "2026-08-26"
+  next_review: "2026-08-27"
+  review_count: 1
 
 historical_measurements:
   - date: "2026-08-25"
@@ -23,17 +23,29 @@ historical_measurements:
       - "Initial knowledge connected configuration management to version management."
       - "Four activities and CI were recalled immediately."
       - "Answer structure and writing are null because the pending exam-style question was not answered."
+  - date: "2026-08-26"
+    source: "Day 5 review and outline transfer check"
+    understanding: 3
+    recall: 3
+    answer_structure: 3
+    writing: null
+    notes:
+      - "AS-001 transferred successfully: outline matched concept and main activities."
+      - "Initial activity recall was partial: control and audit appeared, but identification and status accounting were missing."
+      - "Official four activities were recalled after correction."
+      - "Concept definition was partial because the first answer described activity flow."
+      - "Writing is null because no timed full answer was written."
 
 current_estimated_state:
-  as_of: "2026-08-25"
+  as_of: "2026-08-26"
   days_since_last_test: 0
-  reviews_since_last_test: 0
+  reviews_since_last_test: 1
   understanding: 3
   recall: 3
-  answer_structure: null
+  answer_structure: 3
   writing: null
   review_status: due_soon
-  reason: "Immediate recall succeeded, but long-term recall and exam outline are not measured."
+  reason: "Outline requirement recognition succeeded, but official activities and concept definition needed correction."
 
 strengths:
   - concept: version_management_relation
@@ -44,20 +56,27 @@ strengths:
     evidence: "Correctly mapped control, status accounting, audit, and identification examples."
   - concept: configuration_item
     evidence: "Recalled CI as 형상항목."
+  - concept: as001_transfer
+    evidence: "On 2026-08-26, built the outline 개념 / 주요 활동 for the configuration-management question."
+  - concept: corrected_core_definition_keywords
+    evidence: "After correction, recalled 형상항목, 변경사항, 무결성, 추적성."
 
 weak_points:
   - concept: long_term_recall
     type: review_needed
-    evidence: "Only immediate recall has been measured."
+    evidence: "Official activities and definition keywords were recalled after correction, but no later no-hint recall has been measured."
   - concept: official_english_terms
     type: keyword
     evidence: "Korean keywords were recalled; English official terms are not yet measured."
   - concept: exam_definition
     type: weak-definition
-    evidence: "Exact exam-ready definition has not yet been recalled."
+    evidence: "On 2026-08-26, initial definition described activity flow rather than the exam-ready concept."
   - concept: answer_structure
     type: weak-structure
-    evidence: "Pending exam-style outline has not yet been answered."
+    evidence: "AS-001 outline succeeded on 2026-08-26, but content structure still needs official activity names and definition precision."
+  - concept: official_activity_names
+    type: missing-keyword
+    evidence: "Initial 2026-08-26 answer missed 식별 and 상태기록 and used 반영 instead of an official activity."
 
 events:
   - date: "2026-08-25"
@@ -115,12 +134,46 @@ events:
     user_answer: ""
     result: pending
     concept: answer_structure
+  - date: "2026-08-26"
+    type: outline_test
+    question: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
+    user_answer: "개념 / 주요 활동"
+    result: success
+    concept: AS-001
+    interpretation: "Question requirements were directly reflected in the outline."
+  - date: "2026-08-26"
+    type: recall_test
+    question: "소프트웨어 형상관리의 주요 활동은?"
+    user_answer: "요청, 승인/반려, 반영, 감사"
+    result: partial_success
+    concept: four_activities
+    interpretation: "Control and audit appeared, but identification and status accounting were missing; 반영 is not an official activity name."
+  - date: "2026-08-26"
+    type: recall_test
+    question: "교정 후 형상관리 4대 활동은?"
+    user_answer: "식별 / 통제 / 상태기록 / 감사"
+    result: success_after_correction
+    concept: four_activities
+  - date: "2026-08-26"
+    type: definition_test
+    question: "소프트웨어 형상관리의 개념은?"
+    user_answer: "관리영역의 식별, 수정사항 요청 시 통제, 승인, 상태기록, 감사"
+    result: partial_success
+    concept: exam_definition
+    interpretation: "Described activity flow rather than definition."
+  - date: "2026-08-26"
+    type: recall_test
+    question: "형상관리 정의 핵심어 빈칸 회상"
+    user_answer: "형상항목, 변경사항, 무결성, 추적성"
+    result: success_after_correction
+    concept: definition_keywords
 
 review_plan:
   base_intervals_days: [1, 3, 7, 14, 30]
   next_active_recall_questions:
-    - "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오. 큰 목차와 주요 활동 4개만 써라."
+    - "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
     - "형상관리 주요 활동 4가지는?"
+    - "형상관리 정의의 핵심어 4개는?"
     - "CI란?"
     - "식별과 통제의 차이는?"
     - "상태기록과 감사의 차이는?"

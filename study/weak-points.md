@@ -29,3 +29,6 @@ Weak points can come from answer reviews, recall tests, outline tests, or timed 
 | 2026-08-25 | Requirements Traceability | Day 4 recall | `definition_connection_tracing`: answered "관리" before correction to "추적" | Next review starts with definition: requirements-design-dev-test connection/tracing |
 | 2026-08-25 | Software Configuration Management | Day 4 new learning | `long_term_recall`: only immediate recall was measured | Recheck four activities after time delay |
 | 2026-08-25 | Software Configuration Management | Day 4 pending outline | `answer_structure`: exam-style outline not yet answered | Start next session with concept and four activities outline |
+| 2026-08-26 | Software Configuration Management | Day 5 review | `official_activity_names`: initial answer missed 식별 and 상태기록, and used 반영 instead of official activity name | Recheck 식별/통제/상태기록/감사 without hints |
+| 2026-08-26 | Software Configuration Management | Day 5 definition test | `weak-definition`: initial answer explained activity flow, not the definition | Recall 형상항목 + 변경관리 -> 무결성 + 추적성 |
+| 2026-08-26 | Requirements Traceability | Day 5 review | `definition_connection_tracing`: connection/tracing between requirements, design, development, and testing was omitted again | Start next session with the exact definition question without hints |

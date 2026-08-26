@@ -108,10 +108,10 @@ study/status.yml -> study/dashboard.md
 - ChatGPT handoff template: `templates/study-session-handoff.md`.
 - Day 3 mobile data recorded: `study/sessions/2026-08-21.md`.
 - Day 4 mobile data recorded: `study/sessions/2026-08-25.md`.
-- Requirements Traceability current weak point: definition connection/tracing is not yet stable without correction; impact analysis improved on 2026-08-25.
-- Software Configuration Management current state: immediate recall of 식별/통제/상태기록/감사 and CI succeeded; long-term recall, English terms, exam definition, and answer structure remain unmeasured.
-- AS-001 state: Requirements Traceability outline alignment succeeded independently twice; next validation is transfer to Software Configuration Management.
-- Next start question: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오." Ask for 큰 목차 and 주요 활동 4개 without hints.
+- Requirements Traceability current weak point: definition connection/tracing is still not stable; on 2026-08-26 the user recalled 누락/변경/영향도/RTM but again omitted requirements-design-development-test connection/tracing.
+- Software Configuration Management current state: AS-001 transferred successfully on 2026-08-26; official activities and definition keywords were recalled after correction, but no-hint long-term recall is still not measured.
+- AS-001 state: Requirements Traceability outline alignment succeeded twice and Software Configuration Management transfer succeeded once.
+- Next start questions: first ask "요구사항 추적성이란 무엇인가?", then "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오.", both without hints.
 - 2027 assumed schedule path: `study/schedule-2027.md`.
 - 2027 assumed application: 2027-01-05 ~ 2027-01-08.
 - 2027 assumed written exam: 2027-02-06.

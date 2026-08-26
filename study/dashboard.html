@@ -531,7 +531,7 @@
     <div class="wrap topbar">
       <div>
         <h1>학습 대시보드</h1>
-        <div class="subtle">2026-08-25 기준 · 2027 가정 일정/WBS 반영</div>
+        <div class="subtle">2026-08-26 기준 · 복습/AS-001 전이 반영</div>
       </div>
       <nav class="toolbar" aria-label="dashboard controls">
         <button type="button" id="expandAll">전체 펼침</button>
@@ -548,8 +548,8 @@
     <section class="summary-grid" aria-label="summary">
       <article class="metric">
         <div class="label">Overall</div>
-        <div class="value">31%</div>
-        <div class="progress"><span style="width:31%"></span></div>
+        <div class="value">32%</div>
+        <div class="progress"><span style="width:32%"></span></div>
         <div class="note">시스템+학습 기준 통합 진행</div>
       </article>
       <article class="metric">
@@ -594,7 +594,7 @@
 
     <section class="alert">
       <strong>Next start</strong>
-      <span>소프트웨어 형상관리의 개념과 주요 활동을 무힌트 목차로 먼저 작성한다.</span>
+      <span>1) 요구사항 추적성 정의 2) 형상관리 개념/주요 활동 3) 가능하면 첫 짧은 답안 작성.</span>
     </section>
 
     <section class="accordion" id="accordion"></section>
@@ -642,11 +642,11 @@
       { id: "T-030", name: "Network fundamentals", group: "OK Topics", domain: "Network", status: "OK", exam: "092, 099, 102, 138, 139", measured: false, flags: ["unmeasured"], dims: {}, note: "서브넷, 오류제어, 해시 기초." },
       { id: "T-031", name: "OS fundamentals", group: "OK Topics", domain: "OS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "가상메모리, 교착상태, inode." },
       { id: "T-032", name: "Data structures and algorithms", group: "OK Topics", domain: "CS", status: "OK", exam: "092, 099, 101, 102", measured: false, flags: ["unmeasured"], dims: {}, note: "B-tree, stack, sort, linked list." },
-      { id: "T-035", name: "Requirements Traceability", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 107, 114, 123, 124, 130, 133, 135, 139", nextReview: "2026-08-26", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: 4, writing: null }, strengths: ["변경관리", "누락관리", "RTM", "AS-001"], weak: ["definition_connection_tracing", "rtm_full_name"], note: "영향도는 개선. 정의의 연결/추적 키워드는 다음 복습 첫 질문." },
+      { id: "T-035", name: "Requirements Traceability", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 107, 114, 123, 124, 130, 133, 135, 139", nextReview: "2026-08-27", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: 4, writing: null }, strengths: ["변경관리", "누락관리", "영향도", "RTM"], weak: ["definition_connection_tracing", "rtm_full_name"], note: "누락/변경/영향도/RTM은 회상. 요구사항-설계-개발-테스트 연결/추적은 반복 약점." },
       { id: "T-036", name: "Agile, Scrum, Kanban, DevOps", group: "OK Topics", domain: "Software Process", status: "OK", exam: "098, 099, 101, 105, 111, 113, 119, 129, 131", measured: false, flags: ["unmeasured"], dims: {}, note: "DevSecOps와 연결." },
       { id: "T-038", name: "PMO and audit", group: "OK Topics", domain: "Management", status: "OK", exam: "098, 102, 105, 111, 117, 118, 121, 129, 136, 137", measured: false, flags: ["unmeasured"], dims: {}, note: "감리/PMO 비교형 빈출." },
       { id: "T-040", name: "Re-engineering and 3R", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "095, 114, 119, 133, 137, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "정의+비교+절차." },
-      { id: "T-041", name: "Software Configuration Management", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 134", nextReview: "2026-08-26", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: null, writing: null }, strengths: ["식별/통제/상태기록/감사", "CI=형상항목"], weak: ["long_term_recall", "official_english_terms", "answer_structure"], note: "즉시 Recall과 사례 구분 성공. 다음 시작 문제로 답안 구조 검증." },
+      { id: "T-041", name: "Software Configuration Management", group: "Due Review", domain: "Software Engineering", status: "OK", exam: "102, 134", nextReview: "2026-08-27", measured: true, flags: ["due", "weak"], dims: { understanding: 3, recall: 3, structure: 3, writing: null }, strengths: ["AS-001 전이", "정의 핵심어 교정 후 회상"], weak: ["official_activity_names", "exam_definition", "long_term_recall"], note: "목차는 성공. 식별/상태기록과 정의 핵심어는 교정 후 성공이라 다음 무힌트 재검증 필요." },
       { id: "T-042", name: "Function point and estimation", group: "OK Topics", domain: "Management / Software", status: "OK", exam: "102, 104, 128", measured: false, flags: ["unmeasured"], dims: {}, note: "계산형/비교형." },
       { id: "T-043", name: "UML and modeling", group: "OK Topics", domain: "Software Engineering", status: "OK", exam: "101, 114", measured: false, flags: ["unmeasured"], dims: {}, note: "stereotype, modeling." },
       { id: "T-044", name: "Security fundamentals", group: "OK Topics", domain: "Security", status: "OK", exam: "092, 101, 102, 138", measured: false, flags: ["unmeasured"], dims: {}, note: "암호, 해시, TLS, 접근통제." },
