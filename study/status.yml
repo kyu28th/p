@@ -39,7 +39,7 @@ areas:
     status: "lifecycle defined; no real answer yet"
   weak_point_tracking:
     percent: 25
-    status: "Day 1 WBS and Day 3/4/5 mobile recall, correction, AS-001 transfer, and weak-point events recorded"
+    status: "Day 1 WBS, Day 3/4/5 measured events, and unscored 2026-09-01 reconstructed evidence recorded"
   trends:
     percent: 10
     status: "latest-source research priorities listed"
@@ -64,7 +64,8 @@ operating_rules:
 personal_learning:
   day_zero_baseline: "2026-08-13"
   studied_topics_count: 4
-  latest_session: "study/sessions/2026-08-26.md"
+  latest_session: "study/sessions/2026-09-01.md"
+  latest_session_record_type: "retrospective reconstruction recorded on 2026-09-18; no new scores"
   topic_states:
     - topic: "WBS"
       path: "study/topic-states/wbs.yml"
@@ -115,6 +116,7 @@ personal_learning:
     - topic: "Requirements Traceability"
       path: "study/topic-states/requirements-traceability.yml"
       first_studied: "2026-08-21"
+      last_studied: "2026-09-01"
       last_tested: "2026-08-26"
       next_review: "2026-08-27"
       measured:
@@ -137,6 +139,7 @@ personal_learning:
       weak_points:
         - "definition_connection_tracing"
         - "rtm_full_name"
+        - "forward_backward_traceability_unverified"
     - topic: "Software Configuration Management"
       path: "study/topic-states/software-configuration-management.yml"
       first_studied: "2026-08-25"
@@ -168,12 +171,14 @@ next_actions:
   - priority: 1
     action: "Review Requirements Traceability definition without hints."
   - priority: 2
-    action: "Review Software Configuration Management concept and main activities without hints."
+    action: "Explain forward and backward traceability starting points and verification purposes with examples."
   - priority: 3
-    action: "If possible, do the first short answer-writing practice."
+    action: "Review Software Configuration Management concept and main activities without hints."
   - priority: 4
-    action: "Research one Priority 1 current gap such as RAG, AI RMF, Zero Trust, or SBOM."
+    action: "If possible, do the first short answer-writing practice."
   - priority: 5
+    action: "Research one Priority 1 current gap such as RAG, AI RMF, Zero Trust, or SBOM."
+  - priority: 6
     action: "Link the practiced question to study/topic-map.md."
 
 schedule_control:

@@ -108,10 +108,12 @@ study/status.yml -> study/dashboard.md
 - ChatGPT handoff template: `templates/study-session-handoff.md`.
 - Day 3 mobile data recorded: `study/sessions/2026-08-21.md`.
 - Day 4 mobile data recorded: `study/sessions/2026-08-25.md`.
+- The 2026-09-01 session was retrospectively reconstructed on 2026-09-18 from preserved user utterances in `study/sessions/2026-09-01.md`; it adds no score, AS-001 success, or writing completion.
 - Requirements Traceability current weak point: definition connection/tracing is still not stable; on 2026-08-26 the user recalled 누락/변경/영향도/RTM but again omitted requirements-design-development-test connection/tracing.
+- The reconstructed 2026-09-01 evidence contains 산출물/연결/영향도/누락/추적/정방향/역방향 terms, but independent recall and the meanings/application of forward/backward traceability remain unverified.
 - Software Configuration Management current state: AS-001 transferred successfully on 2026-08-26; official activities and definition keywords were recalled after correction, but no-hint long-term recall is still not measured.
 - AS-001 state: Requirements Traceability outline alignment succeeded twice and Software Configuration Management transfer succeeded once.
-- Next start questions: first ask "요구사항 추적성이란 무엇인가?", then "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오.", both without hints.
+- Next start sequence: ask "요구사항 추적성이란 무엇인가?" without hints; verify forward/backward traceability starting points and purposes with examples; ask "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오." without hints; then attempt a short answer if possible.
 - 2027 assumed schedule path: `study/schedule-2027.md`.
 - 2027 assumed application: 2027-01-05 ~ 2027-01-08.
 - 2027 assumed written exam: 2027-02-06.

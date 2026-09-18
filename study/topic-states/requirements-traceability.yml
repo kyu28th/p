@@ -6,9 +6,10 @@ coverage_status: OK
 
 dates:
   first_studied: "2026-08-21"
-  last_studied: "2026-08-26"
+  last_studied: "2026-09-01"
   last_tested: "2026-08-26"
   last_reviewed: "2026-08-26"
+  last_evidence_recorded: "2026-09-18"
   next_review: "2026-08-27"
   review_count: 2
 
@@ -72,6 +73,9 @@ weak_points:
   - concept: definition_connection_tracing
     type: recall
     evidence: "On 2026-08-25, answered '관리' before correcting to '추적'; on 2026-08-26, again omitted requirements-design-development-test connection/tracing."
+  - concept: forward_backward_traceability
+    type: verification_needed
+    evidence: "A reconstructed 2026-09-01 transcript contains 정방향 and 역방향, but their meanings, starting points, and application were not verified and independent recall cannot be determined."
   - concept: impact_analysis
     type: recall_improving
     evidence: "Failed initially on 2026-08-21, then recalled without hint on 2026-08-25."
@@ -161,11 +165,38 @@ events:
     result: partial_success
     concept: definition
     interpretation: "Recalled omission, change, impact analysis, and RTM, but omitted connection/tracing between requirements, design, development, and testing. No retest after correction."
+  - date: "2026-09-01"
+    recorded_on: "2026-09-18"
+    type: reconstructed_evidence
+    source: "User utterances preserved in a past conversation; coach questions, hints, and explanations unavailable"
+    utterances:
+      - "기억안나"
+      - "연결 변경 누락 버전관리"
+      - "몰라"
+      - "분석서 설계서 소스코드 테스트결과서"
+      - "변경시 영향도 파악 누락체크"
+      - "추적"
+      - "테스트"
+      - "누락"
+      - "역방향"
+      - "분석 설계 구현 테스트 영향도 누락 정방향 역방향"
+    observed_terms:
+      - "산출물"
+      - "연결"
+      - "변경 영향도"
+      - "누락 확인"
+      - "추적"
+      - "정방향"
+      - "역방향"
+    result: unscored_evidence
+    interpretation: "Relevant terms appeared, but no question may be reconstructed and no correctness or no-hint independent-recall success may be inferred. 정방향/역방향 meanings and application remain unverified. 기억안나/몰라 are not assigned to a specific topic. 버전관리 does not establish a Software Configuration Management review."
+    measurement_effect: "No new score, AS-001 success, writing completion, or historical-measurement change."
 
 review_plan:
   base_intervals_days: [1, 3, 7, 14, 30]
   next_active_recall_questions:
     - "요구사항 추적성이란?"
+    - "정방향·역방향 추적성의 출발점과 확인 목적을 사례로 설명하라."
     - "요구사항과 설계·개발·테스트 산출물 간 무엇을 관리하는가?"
     - "요구사항 변경 시 RTM으로 무엇을 파악하는가?"
     - "RTM의 Full Name과 한국어 의미는?"

@@ -41,6 +41,7 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 - Day 3 mobile study data recorded in `study/sessions/2026-08-21.md`.
 - Day 4 mobile study data recorded in `study/sessions/2026-08-25.md`.
 - Day 5 review data recorded in `study/sessions/2026-08-26.md`.
+- The 2026-09-01 session was retrospectively reconstructed in `study/sessions/2026-09-01.md` on 2026-09-18 without creating scores or independent-recall success.
 - Requirements Traceability topic state recorded in `study/topic-states/requirements-traceability.yml`.
 - Software Configuration Management topic state recorded in `study/topic-states/software-configuration-management.yml`.
 - Project Risk Management review state recorded in `study/topic-states/project-risk-management.yml`.
@@ -51,6 +52,7 @@ The first milestone is 2026-08-22. Round 140 is preserved as an unseen set until
 
 - HWP round 116 conversion.
 - Requirements Traceability active recall review: definition first, especially connection/tracing between requirements, design, development, and testing.
+- Verify forward and backward traceability starting points and purposes with examples; their appearance in the reconstructed 2026-09-01 transcript is not proof of understanding or independent recall.
 - Software Configuration Management no-hint recall: concept definition and official activities.
 - First short answer-writing practice if recall is acceptable.
 - WBS 2.0 milestone: TOP 30 topic definition/outline/keyword recall by 2026-09-30.

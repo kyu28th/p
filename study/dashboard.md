@@ -15,7 +15,7 @@
 | Unseen set | Round 140 was reserved until 2026-08-22 |
 | Total studied topics | 4 |
 | Answer practice | Not started |
-| Weak-point tracking | WBS, Requirements Traceability, Risk Management, Configuration Management events recorded through 2026-08-26 |
+| Weak-point tracking | Measured events through 2026-08-26 plus unscored Requirements Traceability evidence reconstructed for 2026-09-01 |
 | Overall progress | `[###-------] 32%` |
 
 ## 2027 Assumed Schedule
@@ -46,11 +46,11 @@
 |---|---|
 | Studied topics | 4: WBS, Project Risk Management, Requirements Traceability, Software Configuration Management |
 | Due review | Requirements Traceability and Configuration Management due on 2026-08-27 |
-| Weak recall | Requirements Traceability: definition connection/tracing repeated; Configuration Management: official activity names after correction |
+| Weak recall | Requirements Traceability: definition connection/tracing repeated; forward/backward meanings unverified; Configuration Management: official activity names after correction |
 | Weak answer structure | WBS concept/principles outline; first short writing not started |
 | Stable recall | WBS: Work Package, 100% Rule; Risk: 회피/전가/완화/수용; Requirements Traceability: 누락/변경/영향도/RTM |
 | New learning candidates | Software testing and QA, Data quality and governance |
-| Latest studied | 2026-08-26 Requirements Traceability and Software Configuration Management review |
+| Latest studied | 2026-09-01 Requirements Traceability-related session, retrospectively reconstructed on 2026-09-18 without new scores |
 | Latest answer practice | None |
 
 ## Coverage Snapshot
@@ -82,10 +82,11 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 ## Today If Studying
 
 1. Ask without hints: "요구사항 추적성이란 무엇인가?"
-2. Ask without hints: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
-3. If recall is acceptable, do one short answer-writing practice.
-4. Review it with `templates/answer-review.md`.
-5. Update topic state and weak points with dated evidence.
+2. Ask for examples of forward/backward traceability starting points and verification purposes.
+3. Ask without hints: "소프트웨어 형상관리의 개념과 주요 활동을 설명하시오."
+4. If recall is acceptable, do one short answer-writing practice.
+5. Review it with `templates/answer-review.md`.
+6. Update topic state and weak points with dated evidence.
 
 ## System Readiness
 
@@ -95,7 +96,7 @@ past-exam analysis -> topic map -> answer draft -> review -> weak point -> revis
 | Topic cards | `[----------] 2%` | Template exists; sample card exists |
 | Past-exam linking | `[##--------] 20%` | 54-topic map created; per-question links not populated |
 | Answer practice | `[----------] 0%` | Lifecycle defined |
-| Weak-point tracking | `[###-------] 25%` | Day 3/4/5 recall, correction, and AS-001 transfer events recorded |
+| Weak-point tracking | `[###-------] 25%` | Day 3/4/5 measurements plus unscored 2026-09-01 reconstructed evidence recorded |
 | Trends | `[#---------] 10%` | Latest-source research priorities listed |
 | Predictions | `[#---------] 5%` | Recent/increasing topics identified |
 
